@@ -51,4 +51,17 @@ class PagesConttroller extends Controller
     public  function advise(){
         return view('pages.advise');
     }
+
+
+    public  function privacy(){
+        return view('pages.privacy');
+    }
+
+
+
+
+
+    public  function terms(){
+        return view('pages.terms');
+    }
 }

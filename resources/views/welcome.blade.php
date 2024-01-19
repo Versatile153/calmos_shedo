@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 			<main id="main" class="site-main clr"  role="main">
 
@@ -1012,7 +1014,9 @@ sustainable strategies					</p>
 					<div id="elementor-tab-title-1451" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1451" aria-expanded="false">
 												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
 															<span class="elementor-toggle-icon-closed"><i class="fas fa-angle-right"></i></span>
-								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-angle-down"></i></span>
+								<span class="elementor-toggle-icon-opened">
+                                    <i class="elementor-toggle-icon-opened fas fa-angle-down"></i>
+                                </span>
 													</span>
 												<a href="" class="elementor-toggle-title">What is Calamosassets?</a>
 					</div>

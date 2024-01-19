@@ -88,6 +88,8 @@ var ecs_ajax_params = {"ajaxurl":"https:\/\/calamosassets.net\/wp-admin\/admin-a
 <link rel="icon" href="https://calamosassets.net/wp-content/uploads/2023/03/cropped-calamos-fav-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="https://calamosassets.net/wp-content/uploads/2023/03/cropped-calamos-fav-180x180.png" />
 <meta name="msapplication-TileImage" content="https://calamosassets.net/wp-content/uploads/2023/03/cropped-calamos-fav-270x270.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <!-- OceanWP CSS -->
 <style type="text/css">
 /* Header CSS */#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}
@@ -261,9 +263,12 @@ var ecs_ajax_params = {"ajaxurl":"https:\/\/calamosassets.net\/wp-admin\/admin-a
 					<div class="hfe-nav-menu-icon">
 											</div>
 				</div>
-				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-84e0425" class="hfe-nav-menu"><li id="menu-item-330" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="#" class = "hfe-menu-item">Privacy Policy</a></li>
-<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="#" class = "hfe-menu-item">Terms Of Service</a></li>
+				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-84e0425" class="hfe-nav-menu"><li id="menu-item-330" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/privacy" class = "hfe-menu-item">Privacy Policy</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/terms" class = "hfe-menu-item">Terms Of Service</a></li>
+
 <li id="menu-item-334" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="#" class = "hfe-menu-item">Company PDF</a></li>
+
+
 <li id="menu-item-333" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/register" class = "hfe-menu-item">Register</a></li>
 <li id="menu-item-332" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/login" class = "hfe-menu-item">Login</a></li>
 </ul></nav>
@@ -440,10 +445,7 @@ Naperville, IL 60563-2787</span></h2>		</div>
 			</div>
 					</div>
 				</div>
-				<div class="elementor-element elementor-element-168de52 elementor-widget elementor-widget-heading" data-id="168de52" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="#">Company PDF</a></h2>		</div>
-				</div>
+
 				<div class="elementor-element elementor-element-3ca5f0e elementor-widget elementor-widget-heading" data-id="3ca5f0e" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default"><a href="#">Calamos G.I.P summary </a></h2>		</div>

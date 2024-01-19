@@ -32,6 +32,10 @@ Route::get('/agriculture', [App\Http\Controllers\PagesConttroller::class, 'agric
 Route::get('/gold', [App\Http\Controllers\PagesConttroller::class, 'gold']);
 Route::get('/estate', [App\Http\Controllers\PagesConttroller::class, 'estate']);
 Route::get('/advise', [App\Http\Controllers\PagesConttroller::class, 'advise']);
+Route::get('/privacy', [App\Http\Controllers\PagesConttroller::class, 'privacy']);
+Route::get('/terms', [App\Http\Controllers\PagesConttroller::class, 'terms']);
+
+
 
 
 
