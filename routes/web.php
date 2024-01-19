@@ -47,6 +47,8 @@ Route::get('/ticket', [App\Http\Controllers\DashboardConttroller::class, 'ticket
 Route::get('/fa', [App\Http\Controllers\DashboardConttroller::class, 'fa']);
 Route::get('/profile', [App\Http\Controllers\DashboardConttroller::class, 'profile']);
 Route::get('/password', [App\Http\Controllers\DashboardConttroller::class, 'password']);
+Route::get('/invest', [App\Http\Controllers\DashboardConttroller::class, '/invest']);
+
 
 
 

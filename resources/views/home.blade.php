@@ -144,7 +144,21 @@
           <li><a href="/fa" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/2fa.png" alt="icon"> 2FA</a></li>
           <li><a href="/profile" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/profile.png" alt="icon"> Profile</a></li>
           <li><a href="/password" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/password.png" alt="icon"> Change Password</a></li>
-          <li><a href="#" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a></li>
+
+
+          <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a>
+
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+
+        </li>
+
+
+
+
       </ul>
   </div>
 
@@ -174,7 +188,21 @@
                       <ul class="links">
                           <li><a href="#"><i class="las la-user"></i> Profile</a></li>
                           <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li>
+
+
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+                             {{ __('Logout') }}
+
+
+                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                          </form>
+                          </a>
+                        </li>
+
                       </ul>
                   </div>
               </li>

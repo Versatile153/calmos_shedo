@@ -1,4 +1,4 @@
-{{-- @extends('layouts.app')
+ {{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -70,8 +70,8 @@
         </div>
     </div>
 </div>
-@endsection --}}
-
+@endsection
+ --}}
 
 
 
@@ -81,6 +81,9 @@
 
 {{-- <script src="//code.tidio.co/cwyzhn9yovqes3ei913gkoymswdgbwjd.js" async></script> --}}
 <!-- meta tags and other links -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -161,16 +164,17 @@
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-8">
                 <a href="/" class="text-center d-block mb-3 mb-sm-4 auth-page-logo"><img src="https://calamosassets.net/share/assets/images/logoIcon/logo_2.png" alt="logo"></a>
-                <form action="/login" method="POST" class="verify-gcaptcha account-form">
-                    <input type="hidden" name="_token" value="ta3hOvWlL2HvzxKLNNqIdpZ63xvkmQB7GhWv3Xvf">                    <div class="mb-4">
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+
                         <h4 class="mb-2">Login to your account</h4>
                         <p>You can sign in to your account using email or username</p>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <label>Username or Email</label>
-                                <input type="text" name="username" class="form-control form--control h-45">
+                                <label> Email</label>
+                                <input type="text" name="email" class="form-control form--control h-45">
                             </div>
                         </div>
                         <div class="col-12">

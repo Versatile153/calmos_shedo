@@ -49,4 +49,7 @@ class DashboardConttroller extends Controller
     public  function password(){
         return view('dashboard.password');
     }
+    public  function invest(){
+        return view('dashboard.invest');
+    }
 }

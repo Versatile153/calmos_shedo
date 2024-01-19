@@ -172,9 +172,9 @@
                           <p class="fs--14px">versatile</p>
                       </div>
                       <ul class="links">
-                          <li><a href="https://calamosassets.net/share/user/profile-setting"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="https://calamosassets.net/share/user/change-password"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="https://calamosassets.net/share/user/logout"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li><a href="/profile"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="/password"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
                       </ul>
                   </div>
               </li>
@@ -208,8 +208,8 @@
                           </div>
                       </div>
                       <div class="d-flex flex-wrap justify-content-between mt-3 mt-sm-4 gap-2">
-                          <a href="https://calamosassets.net/share/plan" class="btn btn--sm btn--base">Invest Now <i class="las la-arrow-right fs--12px ms-1"></i></a>
-                          <a href="https://calamosassets.net/share/user/withdraw" class="btn btn--sm btn--secondary">Withdraw Now <i class="las la-arrow-right fs--12px ms-1"></i></a>
+                          <a href="/invest" class="btn btn--sm btn--base">Invest Now <i class="las la-arrow-right fs--12px ms-1"></i></a>
+                          <a href="/withdraw" class="btn btn--sm btn--secondary">Withdraw Now <i class="las la-arrow-right fs--12px ms-1"></i></a>
                       </div>
                   </div>
               </div>
