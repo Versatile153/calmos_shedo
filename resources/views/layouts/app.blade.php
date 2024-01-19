@@ -261,11 +261,11 @@ var ecs_ajax_params = {"ajaxurl":"https:\/\/calamosassets.net\/wp-admin\/admin-a
 					<div class="hfe-nav-menu-icon">
 											</div>
 				</div>
-				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-84e0425" class="hfe-nav-menu"><li id="menu-item-330" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/privacy-policy-2/" class = "hfe-menu-item">Privacy Policy</a></li>
-<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/terms-of-service/" class = "hfe-menu-item">Terms Of Service</a></li>
-<li id="menu-item-334" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://calamosassets.net/wp-content/uploads/2023/03/Calamosassets.pdf.pdf" class = "hfe-menu-item">Company PDF</a></li>
-<li id="menu-item-333" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://calamosassets.net/share/user/register" class = "hfe-menu-item">Register</a></li>
-<li id="menu-item-332" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="https://calamosassets.net/share/user/login" class = "hfe-menu-item">Login</a></li>
+				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-84e0425" class="hfe-nav-menu"><li id="menu-item-330" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="#" class = "hfe-menu-item">Privacy Policy</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="#" class = "hfe-menu-item">Terms Of Service</a></li>
+<li id="menu-item-334" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="#" class = "hfe-menu-item">Company PDF</a></li>
+<li id="menu-item-333" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/register" class = "hfe-menu-item">Register</a></li>
+<li id="menu-item-332" class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu"><a href="/login" class = "hfe-menu-item">Login</a></li>
 </ul></nav>
 			</div>
 					</div>
@@ -286,11 +286,11 @@ var ecs_ajax_params = {"ajaxurl":"https:\/\/calamosassets.net\/wp-admin\/admin-a
 					<div class="hfe-nav-menu-icon">
 											</div>
 				</div>
-				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-c563b3c" class="hfe-nav-menu"><li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/medical-cannabis/" class = "hfe-menu-item">Medical Cannabis</a></li>
-<li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/cryptocurrency/" class = "hfe-menu-item">Cryptocurrency</a></li>
-<li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/agriculture/" class = "hfe-menu-item">Agriculture</a></li>
-<li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/real-estate/" class = "hfe-menu-item">Real Estate</a></li>
-<li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/gold/" class = "hfe-menu-item">Gold</a></li>
+				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-c563b3c" class="hfe-nav-menu"><li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/medic-canabis" class = "hfe-menu-item">Medical Cannabis</a></li>
+<li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/crypto/" class = "hfe-menu-item">Cryptocurrency</a></li>
+<li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/agriculture" class = "hfe-menu-item">Agriculture</a></li>
+<li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/estate" class = "hfe-menu-item">Real Estate</a></li>
+<li id="menu-item-337" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/gold" class = "hfe-menu-item">Gold</a></li>
 </ul></nav>
 			</div>
 					</div>
@@ -331,7 +331,7 @@ Naperville, IL 60563-2787</span></h2>		</div>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-31764a7 elementor-widget elementor-widget-heading" data-id="31764a7" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net">© 2022 Calamosassets- <span style="color:#03bfcb
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/">© 2024 Calamosassets- <span style="color:#03bfcb
 ;">Calamosassets.net</span></a></h2>		</div>
 				</div>
 					</div>
@@ -340,7 +340,7 @@ Naperville, IL 60563-2787</span></h2>		</div>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-f22728e elementor-widget elementor-widget-heading" data-id="f22728e" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/contact-us/">Contact Us</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/contact">Contact Us</a></h2>		</div>
 				</div>
 					</div>
 		</div>
@@ -374,7 +374,7 @@ Naperville, IL 60563-2787</span></h2>		</div>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-1e0dc6c elementor-widget elementor-widget-image" data-id="1e0dc6c" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-																<a href="https://calamosassets.net">
+																<a href="/">
 							<img width="323" height="117" src="https://calamosassets.net/wp-content/uploads/2023/03/calamos_white_logo-removebg-preview.png" class="attachment-large size-large wp-image-401" alt="" loading="lazy" srcset="https://calamosassets.net/wp-content/uploads/2023/03/calamos_white_logo-removebg-preview.png 323w, https://calamosassets.net/wp-content/uploads/2023/03/calamos_white_logo-removebg-preview-300x109.png 300w" sizes="(max-width: 323px) 100vw, 323px" />								</a>
 															</div>
 				</div>
@@ -401,15 +401,15 @@ Naperville, IL 60563-2787</span></h2>		</div>
 			<div class="elementor-widget-wrap elementor-element-populated">
 								<div class="elementor-element elementor-element-52058ff elementor-widget elementor-widget-heading" data-id="52058ff" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net">Home</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/">Home</a></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-9d9da4d elementor-widget elementor-widget-heading" data-id="9d9da4d" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/about-us/">About</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/about">About</a></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-28bb045 elementor-widget elementor-widget-heading" data-id="28bb045" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/insight/">Insights</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/insight">Insights</a></h2>		</div>
 				</div>
 					</div>
 		</div>
@@ -429,11 +429,11 @@ Naperville, IL 60563-2787</span></h2>		</div>
 				</div>
 				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-6f91038" class="hfe-nav-menu"><li id="menu-item-451" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent hfe-has-submenu hfe-creative-menu"><div class="hfe-has-submenu-container"><a href="#" class = "hfe-menu-item">Services<span class='hfe-menu-toggle sub-arrow hfe-menu-child-0'><i class='fa'></i></span></a></div>
 <ul class="sub-menu">
-	<li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="https://calamosassets.net/medical-cannabis/" class = "hfe-sub-menu-item">Medical Cannabis</a></li>
-	<li id="menu-item-453" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="https://calamosassets.net/cryptocurrency/" class = "hfe-sub-menu-item">Cryptocurrency</a></li>
-	<li id="menu-item-452" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="https://calamosassets.net/agriculture/" class = "hfe-sub-menu-item">Agriculture</a></li>
-	<li id="menu-item-456" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="https://calamosassets.net/real-estate/" class = "hfe-sub-menu-item">Real Estate</a></li>
-	<li id="menu-item-454" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="https://calamosassets.net/gold/" class = "hfe-sub-menu-item">Gold</a></li>
+	<li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="/medic-canabis" class = "hfe-sub-menu-item">Medical Cannabis</a></li>
+	<li id="menu-item-453" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="/crypto" class = "hfe-sub-menu-item">Cryptocurrency</a></li>
+	<li id="menu-item-452" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="/agriculture" class = "hfe-sub-menu-item">Agriculture</a></li>
+	<li id="menu-item-456" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="/estate" class = "hfe-sub-menu-item">Real Estate</a></li>
+	<li id="menu-item-454" class="menu-item menu-item-type-post_type menu-item-object-page hfe-creative-menu"><a href="/gold" class = "hfe-sub-menu-item">Gold</a></li>
 </ul>
 </li>
 </ul></nav>
@@ -442,23 +442,23 @@ Naperville, IL 60563-2787</span></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-168de52 elementor-widget elementor-widget-heading" data-id="168de52" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/wp-content/uploads/2023/03/Calamosassets.pdf.pdf">Company PDF</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="#">Company PDF</a></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-3ca5f0e elementor-widget elementor-widget-heading" data-id="3ca5f0e" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/wp-content/uploads/2023/10/calamos-cat-summary-prospectus.pdf">Calamos G.I.P summary </a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="#">Calamos G.I.P summary </a></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-7c3cf74 elementor-widget elementor-widget-heading" data-id="7c3cf74" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/wp-content/uploads/2023/10/Safari.pdf">Our statement</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="#">Our statement</a></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-84769a6 elementor-widget elementor-widget-heading" data-id="84769a6" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/share/user/login">Login</a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/login">Login</a></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-61b306b elementor-widget elementor-widget-heading" data-id="61b306b" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default"><a href="https://calamosassets.net/contact-us/">Contact </a></h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default"><a href="/contact">Contact </a></h2>		</div>
 				</div>
 					</div>
 		</div>
@@ -470,7 +470,7 @@ Naperville, IL 60563-2787</span></h2>		</div>
 				</div>
 				<div class="elementor-element elementor-element-9ce29c5 elementor-widget elementor-widget-text-editor" data-id="9ce29c5" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-							<p>2020 Calamos Court<br />Naperville, IL 60563-2787</p>						</div>
+							<p>2024 Calamos Court<br />Naperville, IL 60563-2787</p>						</div>
 				</div>
 					</div>
 		</div>
