@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Deposit;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $totalDeposits = auth()->user()->deposits()->sum('amount');
+        // Get the sum of amounts for approved deposits
+        $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
+
+        // Get the sum of amounts for pending deposits
+        $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+
+        return view('home', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
     }
 }

@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'mobile',
         'country',
-
+       'referral_link',
+       'referred_by',
         'password',
 
     ];
@@ -46,4 +47,43 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+
+    public function deposits()
+    {
+        return $this->hasMany(Deposit::class);
+    }
+
+// app/Models/User.php
+
+public function transactions()
+{
+    return $this->hasMany(Transaction::class);
+}
+
+public function invests()
+{
+    return $this->hasMany(Invest::class);
+}
+
+public function tickets()
+{
+    return $this->hasMany(Ticket::class);
+}
+
+
+
+// User.php
+
+public function referredUsers()
+{
+    return $this->hasMany(User::class, 'referred_by', 'referral_link');
+}
+
+
+public function withdrawals()
+{
+    return $this->hasMany(Withdraw::class);
+}
+
 }

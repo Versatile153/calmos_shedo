@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('country');
-            $table->integer('mobile'); // For a regular integer (typically 4 bytes)
+            $table->bigInteger('mobile');
 
+            // $table->string('referred_by')->nullable();
 
+            $table->string('referral_link')->nullable()->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

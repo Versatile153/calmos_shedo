@@ -196,8 +196,11 @@
           <div class="card custom--card">
               <div class="card-body">
 
-                  <form action="" method="post">
-                      <input type="hidden" name="_token" value="maMO8FuYitD6cP2TGwO0olIhAxQvOkF5YhBbQ4q6">                    <div class="form-group">
+                <form method="POST" action="{{ route('password.update') }}">
+                    @csrf
+                    @method('PUT')
+
+                    <div class="form-group">
                           <label class="form-label">Current Password</label>
                           <input type="password" class="form-control form--control" name="current_password" required autocomplete="current-password">
                       </div>

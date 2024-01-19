@@ -81,7 +81,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-8">
                 <a href="#" class="text-center d-block mb-3 mb-sm-4 auth-page-logo"><img src="https://calamosassets.net/share/assets/images/logoIcon/logo_2.png" alt="logo"></a>
-                <form method="POST" action="{{ route('register') }}"  class="row justify-content-center">
+                <form method="POST" action="/users"  class="row justify-content-center">
                     @csrf
 
                         <h4 class="mb-2">Create an Account</h4>
@@ -91,28 +91,35 @@
                                                 <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Username</label>
-                                <input id="name" type="text" required class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="text" class="form-control form--control checkUser h-45" name="name"
+                                    value="" required>
                                 <small class="text-danger usernameExist"></small>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">E-Mail Address</label>
-                                <input id="email" type="email" required class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="email" class="form-control form--control h-45 checkUser" name="email"
+                                    value="" required>
                             </div>
                         </div>
+
+
+
+
+
+ <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="form-label">Refferal Code</label>
+                                <input type="text" placeholder="optional" class="form-control form--control h-45 checkUser" name="referred_by"
+                                    value="{{$referralLink }}">
+                            </div>
+                        </div>
+
+
+
+
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label">Country</label>
@@ -882,7 +889,7 @@
                             <button type="submit" class="btn btn--base w-100">Create Account</button>
                         </div>
                         <div class="col-12 mt-4">
-                            <p class="text-center">Already have an account? <a href="/login" class="fw-bold text--base">Login Account</a></p>
+                            <p class="text-center">Already have an account? <a href="https://calamosassets.net/share/user/login" class="fw-bold text--base">Login Account</a></p>
                         </div>
                     </div>
                 </form>

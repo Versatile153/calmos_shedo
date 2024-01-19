@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -71,7 +72,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'country' => $data['country'],
             'mobile' => $data['mobile'],
-
+            'referral_link' => Str::uuid()->toString(),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
