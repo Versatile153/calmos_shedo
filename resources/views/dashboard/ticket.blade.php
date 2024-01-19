@@ -44,8 +44,8 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title> Calamosassets - Dashboard</title>
-      <meta name="title" Content="Calamosassets - Dashboard">
+      <title> Calamosassets - Support Tickets</title>
+      <meta name="title" Content="Calamosassets - Support Tickets">
 
       <meta name="description" content="Calamosassets was founded by industry leaders in the Digital Asset investment industry. Calamosassets  is the leading digital asset trading platform that allows clients to directly trade cryptocurrencies in real-time through their individual fully automated portfolio.">
       <meta name="keywords" content="investment">
@@ -55,9 +55,9 @@
       <link rel="apple-touch-icon" href="https://calamosassets.net/share/assets/images/logoIcon/logo.png">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
-      <meta name="apple-mobile-web-app-title" content="Calamosassets - Dashboard">
+      <meta name="apple-mobile-web-app-title" content="Calamosassets - Support Tickets">
 
-      <meta itemprop="name" content="Calamosassets - Dashboard">
+      <meta itemprop="name" content="Calamosassets - Support Tickets">
       <meta itemprop="description" content="Calamosassets was founded by industry leaders in the Digital Asset investment industry. Calamosassets  is the leading digital asset trading platform that allows clients to directly trade cryptocurrencies in real-time through their individual fully automated portfolio.">
       <meta itemprop="image" content="https://calamosassets.net/share/assets/images/seo/640b938b0f5051678480267.png">
 
@@ -68,7 +68,7 @@
       <meta property="og:image:type" content="png"/>
       <meta property="og:image:width" content="1180" />
       <meta property="og:image:height" content="600" />
-      <meta property="og:url" content="https://calamosassets.net/share/user/dashboard">
+      <meta property="og:url" content="https://calamosassets.net/share/ticket">
 
       <meta name="twitter:card" content="summary_large_image">
       <!-- font  -->
@@ -131,8 +131,8 @@
           </div>
       </div>
       <ul class="sidebar-menu">
-          <li><a href="/home" class="active"><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/dashboard.png" alt="icon"> Dashboard</a></li>
-          <li><a href="/investment" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/investment.png" alt="icon"> Investments</a></li>
+          <li><a href="/home" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/dashboard.png" alt="icon"> Dashboard</a></li>
+          <li><a href="/statistics" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/investment.png" alt="icon"> Investments</a></li>
           <li><a href="/deposit" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/wallet.png" alt="icon"> Deposit</a></li>
           <li><a href="/withdraw" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/withdraw.png" alt="icon"> Withdraw</a></li>
                   <li><a href="/transfer" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/balance-transfer.png" alt="icon"> Transfer Balance</a></li>
@@ -140,11 +140,11 @@
           <li><a href="/refferal" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/referral.png" alt="icon"> Referrals</a></li>
                   <li><a href="#" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/promotion.png" alt="icon"> Promotional Banner</a></li>
 
-          <li><a href="/ticket" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/ticket.png" alt="icon"> Support Ticket</a></li>
+          <li><a href="/ticket" class="active"><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/ticket.png" alt="icon"> Support Ticket</a></li>
           <li><a href="/fa" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/2fa.png" alt="icon"> 2FA</a></li>
           <li><a href="/profile" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/profile.png" alt="icon"> Profile</a></li>
           <li><a href="/password" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/password.png" alt="icon"> Change Password</a></li>
-          <li><a href="#" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a></li>
+          <li><a href="" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a></li>
       </ul>
   </div>
 
@@ -172,9 +172,9 @@
                           <p class="fs--14px">versatile</p>
                       </div>
                       <ul class="links">
-                          <li><a href="#"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li><a href="/profile"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="/password"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href=""><i class="las la-sign-out-alt"></i> Logout</a></li>
                       </ul>
                   </div>
               </li>
@@ -188,148 +188,21 @@
   </script>
           <div class="dashboard-container">
 
-
-      <div class="dashboard-inner">
-
-
-
-
-
-          <!---->
-          <!--<div class="alert border border--warning" role="alert">-->
-          <!--    <div class="alert__icon d-flex align-items-center text--warning"><i class="fas fa-user-lock"></i></div>-->
-          <!--    <p class="alert__message">-->
-          <!--        <span class="fw-bold">2FA Authentication</span><br>-->
-          <!--        <small><i>To keep safe your account, Please enable <a href="https://calamosassets.net/share/user/twofactor" class="link-color">2FA</a> security.</i> It will make secure your account and balance.</small>-->
-          <!--    </p>-->
-          <!--</div>-->
-          <!---->
-
-
-                  <div class="alert border border--info" role="alert">
-              <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
-              <p class="alert__message">
-                  <span class="fw-bold">KYC Verification Required</span><br>
-                  <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="#" class="link-color">Click here</a> to submit KYC information.</i></small>
-              </p>
-          </div>
-
-          <div class="row g-3 mt-4">
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Deposits</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to deposit $300.00. Where $300.00 is just initiated but not submitted.</i></small></p>
-                      </div>
+                  <div class="dashboard-inner">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="text-end mb-3 d-flex flex-wrap justify-content-between gap-1">
+                      <h3>Support Tickets</h3>
+                      <a href="https://calamosassets.net/share/ticket/new" class="btn btn--base btn--smd">Open Support Ticket</a>
                   </div>
-              </div>
-
-
-              <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="#" rel="noopener" target="_blank"><span class="blue-text">AAPL stock analysis</span></a> by Calamosassets</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-    {
-    "interval": "1m",
-    "width": 425,
-    "isTransparent": false,
-    "height": 450,
-    "symbol": "NASDAQ:AAPL",
-    "showIntervalTabs": true,
-    "locale": "en",
-    "colorTheme": "light"
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-
-
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Withdrawals</h5>
+                  <div class="card">
+                                          <div class="card-body text-center">
+                          <h4 class="text--muted"><i class="far fa-frown"></i> Data not found</h4>
                       </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to withdraw $0.00. Where $0.00 is just initiated but not submitted.</i></small></p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Total Investments</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Completed</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Running</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Interests</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've invested $0.00 from the deposit wallet and $0.00 from the interest wallet</i></small></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="card mt-4 mb-4">
-              <div class="card-body">
-                  <div class="mb-2">
-                      <h5 class="title">Latest ROI Statistics</h5>
-                      <p> <small><i>Here is last 30 days statistics of your ROI (Return on Investment)</i></small></p>
-                  </div>
-                  <div id="chart"></div>
+                                                          </div>
               </div>
           </div>
       </div>
-
-
-
 
           </div>
       </div>
@@ -349,89 +222,6 @@
       <!-- Main js -->
       <script src="https://calamosassets.net/share/assets/templates/invester/js/main.js"></script>
 
-      <script src="https://calamosassets.net/share/assets/templates/invester//js/lib/apexcharts.min.js"></script>
-
-  <script>
-
-      // apex-line chart
-      var options = {
-          chart: {
-              height: 350,
-              type: "area",
-              toolbar: {
-                  show: false
-              },
-              dropShadow: {
-                  enabled: true,
-                  enabledSeries: [0],
-                  top: -2,
-                  left: 0,
-                  blur: 10,
-                  opacity: 0.08,
-              },
-              animations: {
-                  enabled: true,
-                  easing: 'linear',
-                  dynamicAnimation: {
-                      speed: 1000
-                  }
-              },
-          },
-          dataLabels: {
-              enabled: false
-          },
-          series: [
-              {
-                  name: "Price",
-                  data: [
-
-                  ]
-              }
-          ],
-          fill: {
-              type: "gradient",
-              colors: ['#4c7de6', '#4c7de6', '#4c7de6'],
-              gradient: {
-                  shadeIntensity: 1,
-                  opacityFrom: 0.6,
-                  opacityTo: 0.9,
-                  stops: [0, 90, 100]
-              }
-          },
-          xaxis: {
-              title: "Value",
-              categories: [
-                              ]
-          },
-          grid: {
-              padding: {
-                  left: 5,
-                  right: 5
-              },
-              xaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-              yaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-          },
-      };
-
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-      chart.render();
-
-
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-
-  </script>
 
 
       <link rel="stylesheet" href="https://calamosassets.net/share/assets/global/css/iziToast.min.css">

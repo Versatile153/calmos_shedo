@@ -147,7 +147,6 @@
           <li><a href="#" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a></li>
       </ul>
   </div>
-
       <div class="dashboard-wrapper">
 
           <div class="dashboard-nav d-flex flex-wrap align-items-center justify-content-between">
@@ -172,9 +171,9 @@
                           <p class="fs--14px">versatile</p>
                       </div>
                       <ul class="links">
-                          <li><a href="#"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li><a href="https://calamosassets.net/share/user/profile-setting"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="https://calamosassets.net/share/user/change-password"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href="https://calamosassets.net/share/user/logout"><i class="las la-sign-out-alt"></i> Logout</a></li>
                       </ul>
                   </div>
               </li>
@@ -188,148 +187,115 @@
   </script>
           <div class="dashboard-container">
 
-
-      <div class="dashboard-inner">
-
-
-
-
-
-          <!---->
-          <!--<div class="alert border border--warning" role="alert">-->
-          <!--    <div class="alert__icon d-flex align-items-center text--warning"><i class="fas fa-user-lock"></i></div>-->
-          <!--    <p class="alert__message">-->
-          <!--        <span class="fw-bold">2FA Authentication</span><br>-->
-          <!--        <small><i>To keep safe your account, Please enable <a href="https://calamosassets.net/share/user/twofactor" class="link-color">2FA</a> security.</i> It will make secure your account and balance.</small>-->
-          <!--    </p>-->
-          <!--</div>-->
-          <!---->
-
-
-                  <div class="alert border border--info" role="alert">
-              <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
-              <p class="alert__message">
-                  <span class="fw-bold">KYC Verification Required</span><br>
-                  <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="#" class="link-color">Click here</a> to submit KYC information.</i></small>
-              </p>
-          </div>
-
-          <div class="row g-3 mt-4">
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Deposits</h5>
+              <div class="dashboard-inner">
+      <div class="mb-4">
+          <p>Transaction</p>
+          <h3>My Transactions History</h3>
+      </div>
+      <hr>
+      <div class="filter-area mb-3">
+          <div class="d-flex flex-wrap gap-4">
+              <div class="flex-grow-1">
+                  <form action="">
+                      <div class="custom-input-box trx-search">
+                          <label>Transaction Number</label>
+                          <input type="text" name="search" value="" placeholder="Transaction Number">
+                          <button type="submit" class="icon-area">
+                              <i class="las la-search"></i>
+                          </button>
                       </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to deposit $300.00. Where $300.00 is just initiated but not submitted.</i></small></p>
-                      </div>
+                  </form>
+              </div>
+              <div class="flex-grow-1">
+                  <div class="custom-input-box">
+                      <label>Wallet</label>
+                      <select name="wallet_type" onChange="window.location.href=this.value">
+                          <option value=/share/user/transactions?wallet=>All</option>
+                          <option value="/share/user/transactions?wallet_type=deposit_wallet" >Deposit Wallet</option>
+                          <option value="/share/user/transactions?wallet_type=interest_wallet" >Interest Wallet</option>
+                      </select>
                   </div>
               </div>
-
-
-              <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="#" rel="noopener" target="_blank"><span class="blue-text">AAPL stock analysis</span></a> by Calamosassets</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-    {
-    "interval": "1m",
-    "width": 425,
-    "isTransparent": false,
-    "height": 450,
-    "symbol": "NASDAQ:AAPL",
-    "showIntervalTabs": true,
-    "locale": "en",
-    "colorTheme": "light"
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-
-
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Withdrawals</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to withdraw $0.00. Where $0.00 is just initiated but not submitted.</i></small></p>
-                      </div>
+              <div class="flex-grow-1">
+                  <div class="custom-input-box">
+                      <label>Type</label>
+                      <select name="trx_type" onChange="window.location.href=this.value">
+                          <option value="/share/user/transactions?trx_type=">All</option>
+                          <option value="/share/user/transactions?trx_type=%2B" >Plus</option>
+                          <option value="/share/user/transactions?trx_type=-" >Minus</option>
+                      </select>
                   </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Total Investments</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Completed</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Running</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Interests</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've invested $0.00 from the deposit wallet and $0.00 from the interest wallet</i></small></p>
-                      </div>
+              <div class="flex-grow-1">
+                  <div class="custom-input-box">
+                      <label>Remark</label>
+                      <select name="remark" onChange="window.location.href=this.value">
+                          <option value="/share/user/transactions?remark=">Any</option>
+                                                  <option value="/share/user/transactions?remark=balance_add" >Balance add</option>
+                                                  <option value="/share/user/transactions?remark=balance_subtract" >Balance subtract</option>
+                                                  <option value="/share/user/transactions?remark=capital_return" >Capital return</option>
+                                                  <option value="/share/user/transactions?remark=deposit" >Deposit</option>
+                                                  <option value="/share/user/transactions?remark=interest" >Interest</option>
+                                                  <option value="/share/user/transactions?remark=invest" >Invest</option>
+                                                  <option value="/share/user/transactions?remark=registration_bonus" >Registration bonus</option>
+                                                  <option value="/share/user/transactions?remark=withdraw" >Withdraw</option>
+                                                  <option value="/share/user/transactions?remark=withdraw_reject" >Withdraw reject</option>
+                                              </select>
                   </div>
-              </div>
-          </div>
-
-          <div class="card mt-4 mb-4">
-              <div class="card-body">
-                  <div class="mb-2">
-                      <h5 class="title">Latest ROI Statistics</h5>
-                      <p> <small><i>Here is last 30 days statistics of your ROI (Return on Investment)</i></small></p>
-                  </div>
-                  <div id="chart"></div>
               </div>
           </div>
       </div>
 
+      <div class="accordion table--acordion" id="transactionAccordion">
+                      <div class="accordion-item transaction-item">
+                  <h2 class="accordion-header" id="h-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-1">
+                      <div class="col-lg-4 col-sm-5 col-8 order-1 icon-wrapper">
+                          <div class="left">
+                              <div class="icon tr-icon  icon-success ">
+                                  <i class="las la-long-arrow-alt-right"></i>
+                              </div>
+                              <div class="content">
+                                  <h6 class="trans-title">Registration bonus - Deposit wallet</h6>
+                                  <span class="text-muted font-size--14px mt-2">Jan 25 2024 @12:46:pm</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-4 col-12 order-sm-2 order-3 content-wrapper mt-sm-0 mt-3">
+                          <p class="text-muted font-size--14px"><b>#YT4JYYBUC3CZ</b></p>
+                      </div>
+                      <div class="col-lg-4 col-sm-3 col-4 order-sm-3 order-2 text-end amount-wrapper">
+                          <p>
+                              <b>50.00 USD</b><br>
+                              <small class="fw-bold text-muted">Balance: 50.00 USD</small>
+                          </p>
+
+                      </div>
+                  </button>
+                  </h2>
+                  <div id="c-1" class="accordion-collapse collapse" aria-labelledby="h-1" data-bs-parent="#transactionAccordion">
+                      <div class="accordion-body">
+                          <ul class="caption-list">
+                              <li>
+                                  <span class="caption">Charge</span>
+                                  <span class="value">0.00 USD</span>
+                              </li>
+                              <li>
+                                  <span class="caption">Post Balance</span>
+                                  <span class="value">50.00 USD</span>
+                              </li>
+                              <li>
+                                  <span class="caption">Details</span>
+                                  <span class="value">You have got registration bonus</span>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div><!-- transaction-item end -->
+              </div>
 
 
+      </div>
 
           </div>
       </div>
@@ -349,89 +315,6 @@
       <!-- Main js -->
       <script src="https://calamosassets.net/share/assets/templates/invester/js/main.js"></script>
 
-      <script src="https://calamosassets.net/share/assets/templates/invester//js/lib/apexcharts.min.js"></script>
-
-  <script>
-
-      // apex-line chart
-      var options = {
-          chart: {
-              height: 350,
-              type: "area",
-              toolbar: {
-                  show: false
-              },
-              dropShadow: {
-                  enabled: true,
-                  enabledSeries: [0],
-                  top: -2,
-                  left: 0,
-                  blur: 10,
-                  opacity: 0.08,
-              },
-              animations: {
-                  enabled: true,
-                  easing: 'linear',
-                  dynamicAnimation: {
-                      speed: 1000
-                  }
-              },
-          },
-          dataLabels: {
-              enabled: false
-          },
-          series: [
-              {
-                  name: "Price",
-                  data: [
-
-                  ]
-              }
-          ],
-          fill: {
-              type: "gradient",
-              colors: ['#4c7de6', '#4c7de6', '#4c7de6'],
-              gradient: {
-                  shadeIntensity: 1,
-                  opacityFrom: 0.6,
-                  opacityTo: 0.9,
-                  stops: [0, 90, 100]
-              }
-          },
-          xaxis: {
-              title: "Value",
-              categories: [
-                              ]
-          },
-          grid: {
-              padding: {
-                  left: 5,
-                  right: 5
-              },
-              xaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-              yaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-          },
-      };
-
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-      chart.render();
-
-
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-
-  </script>
 
 
       <link rel="stylesheet" href="https://calamosassets.net/share/assets/global/css/iziToast.min.css">

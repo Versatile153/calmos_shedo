@@ -147,7 +147,6 @@
           <li><a href="#" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a></li>
       </ul>
   </div>
-
       <div class="dashboard-wrapper">
 
           <div class="dashboard-nav d-flex flex-wrap align-items-center justify-content-between">
@@ -172,9 +171,9 @@
                           <p class="fs--14px">versatile</p>
                       </div>
                       <ul class="links">
-                          <li><a href="#"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li><a href="https://calamosassets.net/share/user/profile-setting"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="https://calamosassets.net/share/user/change-password"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href="https://calamosassets.net/share/user/logout"><i class="las la-sign-out-alt"></i> Logout</a></li>
                       </ul>
                   </div>
               </li>
@@ -189,146 +188,25 @@
           <div class="dashboard-container">
 
 
-      <div class="dashboard-inner">
-
-
-
-
-
-          <!---->
-          <!--<div class="alert border border--warning" role="alert">-->
-          <!--    <div class="alert__icon d-flex align-items-center text--warning"><i class="fas fa-user-lock"></i></div>-->
-          <!--    <p class="alert__message">-->
-          <!--        <span class="fw-bold">2FA Authentication</span><br>-->
-          <!--        <small><i>To keep safe your account, Please enable <a href="https://calamosassets.net/share/user/twofactor" class="link-color">2FA</a> security.</i> It will make secure your account and balance.</small>-->
-          <!--    </p>-->
-          <!--</div>-->
-          <!---->
-
-
-                  <div class="alert border border--info" role="alert">
-              <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
-              <p class="alert__message">
-                  <span class="fw-bold">KYC Verification Required</span><br>
-                  <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="#" class="link-color">Click here</a> to submit KYC information.</i></small>
-              </p>
-          </div>
-
-          <div class="row g-3 mt-4">
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Deposits</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to deposit $300.00. Where $300.00 is just initiated but not submitted.</i></small></p>
-                      </div>
-                  </div>
-              </div>
-
-
-              <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="#" rel="noopener" target="_blank"><span class="blue-text">AAPL stock analysis</span></a> by Calamosassets</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-    {
-    "interval": "1m",
-    "width": 425,
-    "isTransparent": false,
-    "height": 450,
-    "symbol": "NASDAQ:AAPL",
-    "showIntervalTabs": true,
-    "locale": "en",
-    "colorTheme": "light"
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-
-
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Withdrawals</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to withdraw $0.00. Where $0.00 is just initiated but not submitted.</i></small></p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Total Investments</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Completed</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Running</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Interests</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've invested $0.00 from the deposit wallet and $0.00 from the interest wallet</i></small></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="card mt-4 mb-4">
-              <div class="card-body">
-                  <div class="mb-2">
-                      <h5 class="title">Latest ROI Statistics</h5>
-                      <p> <small><i>Here is last 30 days statistics of your ROI (Return on Investment)</i></small></p>
-                  </div>
-                  <div id="chart"></div>
-              </div>
-          </div>
+  <div class="dashboard-inner">
+      <div class="mb-4">
+          <h3>My Referrals</h3>
       </div>
-
-
+      <div class="row gy-4">
+          <div class="col-md-12">
+              <div class="card mb-3">
+                  <div class="card-body">
+                      <h4 class="mb-1">Refer & Enjoy the Bonus</h4>
+                      <p class="mb-3">You'll get commission against your referral's activities. Level has been decided by the <strong><i>Calamosassets</i></strong> authority. If you reach the level, you'll get commission.</p>
+                      <div class="copy-link">
+                          <input type="text" class="copyURL" value="https://calamosassets.net/share?reference=versatile" readonly>
+                          <span class="copyBoard" id="copyBoard"><i class="las la-copy"></i> <strong class="copyText">Copy</strong></span>
+                      </div>
+                  </div>
+              </div>
+                      </div>
+      </div>
+  </div>
 
 
           </div>
@@ -349,88 +227,25 @@
       <!-- Main js -->
       <script src="https://calamosassets.net/share/assets/templates/invester/js/main.js"></script>
 
-      <script src="https://calamosassets.net/share/assets/templates/invester//js/lib/apexcharts.min.js"></script>
-
+      <script src="https://calamosassets.net/share/assets/global/js/jquery.treeView.js"></script>
   <script>
+      (function($){
+      "use strict"
+          $('.treeview').treeView();
+          $('.copyBoard').click(function(){
+                  var copyText = document.getElementsByClassName("copyURL");
+                  copyText = copyText[0];
+                  copyText.select();
+                  copyText.setSelectionRange(0, 99999);
 
-      // apex-line chart
-      var options = {
-          chart: {
-              height: 350,
-              type: "area",
-              toolbar: {
-                  show: false
-              },
-              dropShadow: {
-                  enabled: true,
-                  enabledSeries: [0],
-                  top: -2,
-                  left: 0,
-                  blur: 10,
-                  opacity: 0.08,
-              },
-              animations: {
-                  enabled: true,
-                  easing: 'linear',
-                  dynamicAnimation: {
-                      speed: 1000
-                  }
-              },
-          },
-          dataLabels: {
-              enabled: false
-          },
-          series: [
-              {
-                  name: "Price",
-                  data: [
-
-                  ]
-              }
-          ],
-          fill: {
-              type: "gradient",
-              colors: ['#4c7de6', '#4c7de6', '#4c7de6'],
-              gradient: {
-                  shadeIntensity: 1,
-                  opacityFrom: 0.6,
-                  opacityTo: 0.9,
-                  stops: [0, 90, 100]
-              }
-          },
-          xaxis: {
-              title: "Value",
-              categories: [
-                              ]
-          },
-          grid: {
-              padding: {
-                  left: 5,
-                  right: 5
-              },
-              xaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-              yaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-          },
-      };
-
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-      chart.render();
-
-
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-
+                  /*For mobile devices*/
+                  document.execCommand("copy");
+                  $('.copyText').text('Copied');
+                  setTimeout(() => {
+                      $('.copyText').text('Copy');
+                  }, 2000);
+          });
+      })(jQuery);
   </script>
 
 

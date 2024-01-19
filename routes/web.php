@@ -36,6 +36,28 @@ Route::get('/privacy', [App\Http\Controllers\PagesConttroller::class, 'privacy']
 Route::get('/terms', [App\Http\Controllers\PagesConttroller::class, 'terms']);
 
 
+//dashboard routes
+Route::get('/deposit', [App\Http\Controllers\DashboardConttroller::class, 'deposit']);
+Route::get('/withdraw', [App\Http\Controllers\DashboardConttroller::class, 'withdraw']);
+Route::get('/investment', [App\Http\Controllers\DashboardConttroller::class, 'investment']);
+Route::get('/transfer', [App\Http\Controllers\DashboardConttroller::class, 'transfer']);
+Route::get('/transaction', [App\Http\Controllers\DashboardConttroller::class, 'transaction']);
+Route::get('/refferal', [App\Http\Controllers\DashboardConttroller::class, 'refferal']);
+Route::get('/ticket', [App\Http\Controllers\DashboardConttroller::class, 'ticket']);
+Route::get('/fa', [App\Http\Controllers\DashboardConttroller::class, 'fa']);
+Route::get('/profile', [App\Http\Controllers\DashboardConttroller::class, 'profile']);
+Route::get('/password', [App\Http\Controllers\DashboardConttroller::class, 'password']);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -147,7 +147,6 @@
           <li><a href="#" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a></li>
       </ul>
   </div>
-
       <div class="dashboard-wrapper">
 
           <div class="dashboard-nav d-flex flex-wrap align-items-center justify-content-between">
@@ -172,9 +171,9 @@
                           <p class="fs--14px">versatile</p>
                       </div>
                       <ul class="links">
-                          <li><a href="#"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li><a href="https://calamosassets.net/share/user/profile-setting"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="https://calamosassets.net/share/user/change-password"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href="https://calamosassets.net/share/user/logout"><i class="las la-sign-out-alt"></i> Logout</a></li>
                       </ul>
                   </div>
               </li>
@@ -190,145 +189,72 @@
 
 
       <div class="dashboard-inner">
-
-
-
-
-
-          <!---->
-          <!--<div class="alert border border--warning" role="alert">-->
-          <!--    <div class="alert__icon d-flex align-items-center text--warning"><i class="fas fa-user-lock"></i></div>-->
-          <!--    <p class="alert__message">-->
-          <!--        <span class="fw-bold">2FA Authentication</span><br>-->
-          <!--        <small><i>To keep safe your account, Please enable <a href="https://calamosassets.net/share/user/twofactor" class="link-color">2FA</a> security.</i> It will make secure your account and balance.</small>-->
-          <!--    </p>-->
-          <!--</div>-->
-          <!---->
-
-
-                  <div class="alert border border--info" role="alert">
-              <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
-              <p class="alert__message">
-                  <span class="fw-bold">KYC Verification Required</span><br>
-                  <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="#" class="link-color">Click here</a> to submit KYC information.</i></small>
-              </p>
+          <div class="mb-4">
+              <h3 class="mb-2">Profile</h3>
           </div>
 
-          <div class="row g-3 mt-4">
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Deposits</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to deposit $300.00. Where $300.00 is just initiated but not submitted.</i></small></p>
-                      </div>
-                  </div>
-              </div>
-
-
-              <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="#" rel="noopener" target="_blank"><span class="blue-text">AAPL stock analysis</span></a> by Calamosassets</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-    {
-    "interval": "1m",
-    "width": 425,
-    "isTransparent": false,
-    "height": 450,
-    "symbol": "NASDAQ:AAPL",
-    "showIntervalTabs": true,
-    "locale": "en",
-    "colorTheme": "light"
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-
-
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Withdrawals</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to withdraw $0.00. Where $0.00 is just initiated but not submitted.</i></small></p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Total Investments</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Completed</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Running</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Interests</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've invested $0.00 from the deposit wallet and $0.00 from the interest wallet</i></small></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="card mt-4 mb-4">
+          <div class="card custom--card">
               <div class="card-body">
-                  <div class="mb-2">
-                      <h5 class="title">Latest ROI Statistics</h5>
-                      <p> <small><i>Here is last 30 days statistics of your ROI (Return on Investment)</i></small></p>
-                  </div>
-                  <div id="chart"></div>
+                  <form class="register" action="" method="post">
+                      <input type="hidden" name="_token" value="maMO8FuYitD6cP2TGwO0olIhAxQvOkF5YhBbQ4q6">                    <div class="row">
+                          <div class="form-group col-sm-6">
+                              <label class="form-label">First Name</label>
+                              <input type="text" class="form-control form--control" name="firstname" value="eze" required>
+                          </div>
+                          <div class="form-group col-sm-6">
+                              <label class="form-label">Last Name</label>
+                              <input type="text" class="form-control form--control" name="lastname" value="celestine" required>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-sm-6">
+                              <label class="form-label">E-mail Address</label>
+                              <input class="form-control form--control" value="ceze46321@gmail.com" readonly>
+                          </div>
+                          <div class="form-group col-sm-6">
+                              <label class="form-label">Mobile Number</label>
+                              <input class="form-control form--control" value="2347026912508" readonly>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="form-group col-sm-6">
+                              <label class="form-label">Address</label>
+                              <input type="text" class="form-control form--control" name="address" value="University of Nigeria nsukka">
+                          </div>
+                          <div class="form-group col-sm-6">
+                              <label class="form-label">State</label>
+                              <input type="text" class="form-control form--control" name="state" value="Enugu">
+                          </div>
+                      </div>
+
+
+                      <div class="row">
+                          <div class="form-group col-sm-4">
+                              <label class="form-label">Zip Code</label>
+                              <input type="text" class="form-control form--control" name="zip" value="042">
+                          </div>
+
+                          <div class="form-group col-sm-4">
+                              <label class="form-label">City</label>
+                              <input type="text" class="form-control form--control" name="city" value="Enugu">
+                          </div>
+
+                          <div class="form-group col-sm-4">
+                              <label class="form-label">Country</label>
+                              <input class="form-control form--control" value="Nigeria" disabled>
+                          </div>
+
+                      </div>
+
+                      <div class="form-group mt-3">
+                          <button type="submit" class="btn btn--base w-100">Submit</button>
+                      </div>
+                  </form>
               </div>
           </div>
+
+
       </div>
-
-
 
 
           </div>
@@ -349,89 +275,6 @@
       <!-- Main js -->
       <script src="https://calamosassets.net/share/assets/templates/invester/js/main.js"></script>
 
-      <script src="https://calamosassets.net/share/assets/templates/invester//js/lib/apexcharts.min.js"></script>
-
-  <script>
-
-      // apex-line chart
-      var options = {
-          chart: {
-              height: 350,
-              type: "area",
-              toolbar: {
-                  show: false
-              },
-              dropShadow: {
-                  enabled: true,
-                  enabledSeries: [0],
-                  top: -2,
-                  left: 0,
-                  blur: 10,
-                  opacity: 0.08,
-              },
-              animations: {
-                  enabled: true,
-                  easing: 'linear',
-                  dynamicAnimation: {
-                      speed: 1000
-                  }
-              },
-          },
-          dataLabels: {
-              enabled: false
-          },
-          series: [
-              {
-                  name: "Price",
-                  data: [
-
-                  ]
-              }
-          ],
-          fill: {
-              type: "gradient",
-              colors: ['#4c7de6', '#4c7de6', '#4c7de6'],
-              gradient: {
-                  shadeIntensity: 1,
-                  opacityFrom: 0.6,
-                  opacityTo: 0.9,
-                  stops: [0, 90, 100]
-              }
-          },
-          xaxis: {
-              title: "Value",
-              categories: [
-                              ]
-          },
-          grid: {
-              padding: {
-                  left: 5,
-                  right: 5
-              },
-              xaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-              yaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-          },
-      };
-
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-      chart.render();
-
-
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-
-  </script>
 
 
       <link rel="stylesheet" href="https://calamosassets.net/share/assets/global/css/iziToast.min.css">

@@ -147,7 +147,6 @@
           <li><a href="#" class=""><img src="https://calamosassets.net/share/assets/templates/invester//images/icon/logout.png" alt="icon"> Logout</a></li>
       </ul>
   </div>
-
       <div class="dashboard-wrapper">
 
           <div class="dashboard-nav d-flex flex-wrap align-items-center justify-content-between">
@@ -172,9 +171,9 @@
                           <p class="fs--14px">versatile</p>
                       </div>
                       <ul class="links">
-                          <li><a href="#"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li><a href="https://calamosassets.net/share/user/profile-setting"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="https://calamosassets.net/share/user/change-password"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href="https://calamosassets.net/share/user/logout"><i class="las la-sign-out-alt"></i> Logout</a></li>
                       </ul>
                   </div>
               </li>
@@ -190,151 +189,72 @@
 
 
       <div class="dashboard-inner">
+          <div class="row justify-content-center">
+              <div class=" col-md-12 ">
+                  <div class="mb-4">
+                      <h3>Two Factor Authentication</h3>
+                                          <p>Your account will be more secure if you use this feature. A 6-digit verification code from your Android Google Authenticator app must be entered whenever someone tries to log in to the account. So that the system could verify that, this is you. Additionally, the payout procedure will require this verification.</p>
+                                      </div>
+                  <div class="row gy-4">
 
-
-
-
-
-          <!---->
-          <!--<div class="alert border border--warning" role="alert">-->
-          <!--    <div class="alert__icon d-flex align-items-center text--warning"><i class="fas fa-user-lock"></i></div>-->
-          <!--    <p class="alert__message">-->
-          <!--        <span class="fw-bold">2FA Authentication</span><br>-->
-          <!--        <small><i>To keep safe your account, Please enable <a href="https://calamosassets.net/share/user/twofactor" class="link-color">2FA</a> security.</i> It will make secure your account and balance.</small>-->
-          <!--    </p>-->
-          <!--</div>-->
-          <!---->
-
-
-                  <div class="alert border border--info" role="alert">
-              <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
-              <p class="alert__message">
-                  <span class="fw-bold">KYC Verification Required</span><br>
-                  <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="#" class="link-color">Click here</a> to submit KYC information.</i></small>
-              </p>
-          </div>
-
-          <div class="row g-3 mt-4">
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Deposits</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
+                                          <div class="col-md-6">
+                          <div class="card custom--card">
+                              <div class="card-header">
+                                  <h5 class="mb-0">Add Your Account</h5>
                               </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
+
+                              <div class="card-body">
+                                  <h6 class="mb-3">
+                                      Use the QR code or setup key on your Google Authenticator app to add your account.                                 </h6>
+
+                                  <div class="form-group mb-3 mx-auto text-center">
+                                      <img class="mx-auto" src="https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2Fversatile%40Calamosassets%3Fsecret%3DIVRMCGFQNRG4PBRQ">
+                                  </div>
+
+                                  <div class="form-group mb-3">
+                                      <label class="form-label">Setup Key</label>
+                                      <div class="copy-link">
+                                          <input type="text" class="copyURL" value="IVRMCGFQNRG4PBRQ" readonly>
+                                          <span class="copyBoard" id="copyBoard"><i class="las la-copy"></i> <strong class="copyText">Copy</strong></span>
+                                      </div>
+                                  </div>
+
+                                  <label><i class="fa fa-info-circle"></i> Help</label>
+                                  <p>Google Authenticator is a multifactor app for mobile devices. It generates timed codes used during the 2-step verification process. To use Google Authenticator, install the Google Authenticator application on your mobile device. <a class="text--base" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en" target="_blank">Download</a></p>
                               </div>
                           </div>
-                          <hr>
-                          <p><small><i>You've requested to deposit $300.00. Where $300.00 is just initiated but not submitted.</i></small></p>
                       </div>
+
+
+                      <div class=" col-md-6 ">
+
+                                                      <div class="card custom--card">
+                                  <div class="card-header">
+                                      <h5 class="mb-0">Enable 2FA Security</h5>
+                                  </div>
+                                  <form action="https://calamosassets.net/share/user/twofactor/enable" method="POST">
+                                      <div class="card-body">
+                                          <input type="hidden" name="_token" value="maMO8FuYitD6cP2TGwO0olIhAxQvOkF5YhBbQ4q6">                                        <input type="hidden" name="key" value="IVRMCGFQNRG4PBRQ">
+                                          <div class="form-group mb-3">
+                                              <label class="form-label">Google Authenticatior OTP</label>
+                                              <input type="text" class="form-control form--control" name="code" required>
+                                          </div>
+                                          <button type="submit" class="btn btn--base w-100">Submit</button>
+                                      </div>
+                                  </form>
+                              </div>
+                                              </div>
+
                   </div>
-              </div>
-
-
-              <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="#" rel="noopener" target="_blank"><span class="blue-text">AAPL stock analysis</span></a> by Calamosassets</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-    {
-    "interval": "1m",
-    "width": 425,
-    "isTransparent": false,
-    "height": 450,
-    "symbol": "NASDAQ:AAPL",
-    "showIntervalTabs": true,
-    "locale": "en",
-    "colorTheme": "light"
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-
-
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Withdrawals</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've requested to withdraw $0.00. Where $0.00 is just initiated but not submitted.</i></small></p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Total Investments</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Completed</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Running</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Interests</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've invested $0.00 from the deposit wallet and $0.00 from the interest wallet</i></small></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="card mt-4 mb-4">
-              <div class="card-body">
-                  <div class="mb-2">
-                      <h5 class="title">Latest ROI Statistics</h5>
-                      <p> <small><i>Here is last 30 days statistics of your ROI (Return on Investment)</i></small></p>
-                  </div>
-                  <div id="chart"></div>
               </div>
           </div>
       </div>
 
 
-
-
           </div>
       </div>
   </div>
-  {{-- <script src="//code.tidio.co/cwyzhn9yovqes3ei913gkoymswdgbwjd.js" async></script> --}}
+  <script src="//code.tidio.co/cwyzhn9yovqes3ei913gkoymswdgbwjd.js" async></script>
 
 
       <script src="https://calamosassets.net/share/assets/global/js/jquery-3.6.0.min.js"></script>
@@ -349,89 +269,23 @@
       <!-- Main js -->
       <script src="https://calamosassets.net/share/assets/templates/invester/js/main.js"></script>
 
-      <script src="https://calamosassets.net/share/assets/templates/invester//js/lib/apexcharts.min.js"></script>
-
-  <script>
-
-      // apex-line chart
-      var options = {
-          chart: {
-              height: 350,
-              type: "area",
-              toolbar: {
-                  show: false
-              },
-              dropShadow: {
-                  enabled: true,
-                  enabledSeries: [0],
-                  top: -2,
-                  left: 0,
-                  blur: 10,
-                  opacity: 0.08,
-              },
-              animations: {
-                  enabled: true,
-                  easing: 'linear',
-                  dynamicAnimation: {
-                      speed: 1000
-                  }
-              },
-          },
-          dataLabels: {
-              enabled: false
-          },
-          series: [
-              {
-                  name: "Price",
-                  data: [
-
-                  ]
-              }
-          ],
-          fill: {
-              type: "gradient",
-              colors: ['#4c7de6', '#4c7de6', '#4c7de6'],
-              gradient: {
-                  shadeIntensity: 1,
-                  opacityFrom: 0.6,
-                  opacityTo: 0.9,
-                  stops: [0, 90, 100]
-              }
-          },
-          xaxis: {
-              title: "Value",
-              categories: [
-                              ]
-          },
-          grid: {
-              padding: {
-                  left: 5,
-                  right: 5
-              },
-              xaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-              yaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-          },
-      };
-
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-      chart.render();
-
-
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-
-  </script>
+          <script>
+          (function($){
+              "use strict";
+              $('#copyBoard').click(function(){
+                  var copyText = document.getElementsByClassName("copyURL");
+                  copyText = copyText[0];
+                  copyText.select();
+                  copyText.setSelectionRange(0, 99999);
+                  /*For mobile devices*/
+                  document.execCommand("copy");
+                  $('.copyText').text('Copied');
+                  setTimeout(() => {
+                      $('.copyText').text('Copy');
+                  }, 2000);
+              });
+          })(jQuery);
+      </script>
 
 
       <link rel="stylesheet" href="https://calamosassets.net/share/assets/global/css/iziToast.min.css">

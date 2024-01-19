@@ -172,9 +172,9 @@
                           <p class="fs--14px">versatile</p>
                       </div>
                       <ul class="links">
-                          <li><a href="#"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
-                          <li><a href="#"><i class="las la-sign-out-alt"></i> Logout</a></li>
+                          <li><a href="https://calamosassets.net/share/user/profile-setting"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="https://calamosassets.net/share/user/change-password"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href="https://calamosassets.net/share/user/logout"><i class="las la-sign-out-alt"></i> Logout</a></li>
                       </ul>
                   </div>
               </li>
@@ -188,147 +188,53 @@
   </script>
           <div class="dashboard-container">
 
-
-      <div class="dashboard-inner">
-
-
-
-
-
-          <!---->
-          <!--<div class="alert border border--warning" role="alert">-->
-          <!--    <div class="alert__icon d-flex align-items-center text--warning"><i class="fas fa-user-lock"></i></div>-->
-          <!--    <p class="alert__message">-->
-          <!--        <span class="fw-bold">2FA Authentication</span><br>-->
-          <!--        <small><i>To keep safe your account, Please enable <a href="https://calamosassets.net/share/user/twofactor" class="link-color">2FA</a> security.</i> It will make secure your account and balance.</small>-->
-          <!--    </p>-->
-          <!--</div>-->
-          <!---->
-
-
-                  <div class="alert border border--info" role="alert">
-              <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
-              <p class="alert__message">
-                  <span class="fw-bold">KYC Verification Required</span><br>
-                  <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="#" class="link-color">Click here</a> to submit KYC information.</i></small>
-              </p>
-          </div>
-
-          <div class="row g-3 mt-4">
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Deposits</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
+              <div class="dashboard-inner">
+      <div class="mb-4">
+          <p>Investment</p>
+          <h3>All Investment</h3>
+      </div>
+      <div class="row gy-4">
+          <div class="col-md-5">
+              <div class="card h-100">
+                  <div class="card-body">
+                      <div class="d-flex flex-wrap justify-content-between align-items-center">
+                          <div>
+                              <p class="mb-2 fw-bold">Total Invest</p>
+                              <h4 class="text--base"><sup class="top-0 fw-light me-1">$</sup>0.00</h4>
                           </div>
-                          <hr>
-                          <p><small><i>You've requested to deposit $300.00. Where $300.00 is just initiated but not submitted.</i></small></p>
-                      </div>
-                  </div>
-              </div>
-
-
-              <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="#" rel="noopener" target="_blank"><span class="blue-text">AAPL stock analysis</span></a> by Calamosassets</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-    {
-    "interval": "1m",
-    "width": 425,
-    "isTransparent": false,
-    "height": 450,
-    "symbol": "NASDAQ:AAPL",
-    "showIntervalTabs": true,
-    "locale": "en",
-    "colorTheme": "light"
-  }
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
-
-
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Successful Withdrawals</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
-                              </div>
+                          <div>
+                              <p class="mb-2 fw-bold">Total Profit</p>
+                              <h4 class="text--base"><sup class="top-0 fw-light me-1">$</sup>0.00</h4>
                           </div>
-                          <hr>
-                          <p><small><i>You've requested to withdraw $0.00. Where $0.00 is just initiated but not submitted.</i></small></p>
                       </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="dashboard-widget">
-                      <div class="d-flex justify-content-between">
-                          <h5 class="text-secondary">Total Investments</h5>
-                      </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
-                      <div class="widget-lists">
-                          <div class="row">
-                              <div class="col-4">
-                                  <p class="fw-bold">Completed</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Running</p>
-                                  <span>$0.00</span>
-                              </div>
-                              <div class="col-4">
-                                  <p class="fw-bold">Interests</p>
-                                  <span>$0.00</span>
-                              </div>
-                          </div>
-                          <hr>
-                          <p><small><i>You've invested $0.00 from the deposit wallet and $0.00 from the interest wallet</i></small></p>
+                      <div class="d-flex flex-wrap justify-content-between mt-3 mt-sm-4 gap-2">
+                          <a href="https://calamosassets.net/share/plan" class="btn btn--sm btn--base">Invest Now <i class="las la-arrow-right fs--12px ms-1"></i></a>
+                          <a href="https://calamosassets.net/share/user/withdraw" class="btn btn--sm btn--secondary">Withdraw Now <i class="las la-arrow-right fs--12px ms-1"></i></a>
                       </div>
                   </div>
               </div>
           </div>
-
-          <div class="card mt-4 mb-4">
-              <div class="card-body">
-                  <div class="mb-2">
-                      <h5 class="title">Latest ROI Statistics</h5>
-                      <p> <small><i>Here is last 30 days statistics of your ROI (Return on Investment)</i></small></p>
-                  </div>
-                  <div id="chart"></div>
+          <div class="col-md-7">
+              <div class="card h-100">
+                  <div class="card-body">
+                                          <h3 class="text-center">No Investment Found Yet</h3>
+                                      </div>
               </div>
           </div>
       </div>
 
-
+      <div class="mt-4">
+          <div class="d-flex justify-content-between">
+              <h5 class="title mb-3">Active Plan <span class="count text-base">(0)</span></h5>
+              <a href="https://calamosassets.net/share/user/invest/log" class="link-color">View All <i class="las la-arrow-right"></i></a>
+          </div>
+          <div class="plan-list d-flex flex-wrap flex-xxl-column gap-3 gap-xxl-0">
+                              <div class="accordion-body text-center bg-white p-4">
+                      <h4 class="text--muted"><i class="far fa-frown"></i> Data not found</h4>
+                  </div>
+                      </div>
+      </div>
+  </div>
 
 
           </div>
@@ -349,88 +255,74 @@
       <!-- Main js -->
       <script src="https://calamosassets.net/share/assets/templates/invester/js/main.js"></script>
 
-      <script src="https://calamosassets.net/share/assets/templates/invester//js/lib/apexcharts.min.js"></script>
+      <script src="https://calamosassets.net/share/assets/global/js/chart.min.js"></script>
 
   <script>
-
-      // apex-line chart
-      var options = {
-          chart: {
-              height: 350,
-              type: "area",
-              toolbar: {
-                  show: false
-              },
-              dropShadow: {
-                  enabled: true,
-                  enabledSeries: [0],
-                  top: -2,
-                  left: 0,
-                  blur: 10,
-                  opacity: 0.08,
-              },
-              animations: {
-                  enabled: true,
-                  easing: 'linear',
-                  dynamicAnimation: {
-                      speed: 1000
-                  }
-              },
-          },
-          dataLabels: {
-              enabled: false
-          },
-          series: [
-              {
-                  name: "Price",
+      /* -- Chartjs - Pie Chart -- */
+      var pieChartID = document.getElementById("chartjs-pie-chart").getContext('2d');
+      var pieChart = new Chart(pieChartID, {
+          type: 'pie',
+          data: {
+              datasets: [{
                   data: [
-
-                  ]
-              }
-          ],
-          fill: {
-              type: "gradient",
-              colors: ['#4c7de6', '#4c7de6', '#4c7de6'],
-              gradient: {
-                  shadeIntensity: 1,
-                  opacityFrom: 0.6,
-                  opacityTo: 0.9,
-                  stops: [0, 90, 100]
-              }
-          },
-          xaxis: {
-              title: "Value",
-              categories: [
+                                      ],
+                  borderColor: 'transparent',
+                  backgroundColor: planColors(),
+                  label: 'Dataset 1'
+              }],
+              labels: [
                               ]
           },
-          grid: {
-              padding: {
-                  left: 5,
-                  right: 5
-              },
-              xaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-              yaxis: {
-                  lines: {
-                      show: false
-                  }
-              },
-          },
-      };
+          options: {
+              responsive: true,
+              legend: {
+                  display: false
+              }
+          }
+      });
 
-      var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-      chart.render();
-
-
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
+      var planPoints = $('.planPoint');
+      planPoints.each(function(key,planPoint){
+          var planPoint = $(planPoint)
+          planPoint.css('color',planColors()[key])
       })
 
+      function planColors(){
+          return [
+              '#ff7675',
+              '#6c5ce7',
+              '#ffa62b',
+              '#ffeaa7',
+              '#D980FA',
+              '#fccbcb',
+              '#45aaf2',
+              '#05dfd7',
+              '#FF00F6',
+              '#1e90ff',
+              '#2ed573',
+              '#eccc68',
+              '#ff5200',
+              '#cd84f1',
+              '#7efff5',
+              '#7158e2',
+              '#fff200',
+              '#ff9ff3',
+              '#08ffc8',
+              '#3742fa',
+              '#1089ff',
+              '#70FF61',
+              '#bf9fee',
+              '#574b90'
+          ]
+      }
+  </script>
+
+  <script>
+      let animationCircle=$('.animation-circle');
+      animationCircle.css('animation-duration', function () {
+          let duration = ($(this).data('duration'));
+          return duration;
+      });
   </script>
 
 
