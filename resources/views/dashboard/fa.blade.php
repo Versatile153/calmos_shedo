@@ -28,13 +28,20 @@
                                       Use the QR code or setup key on your Google Authenticator app to add your account.                                 </h6>
 
                                   <div class="form-group mb-3 mx-auto text-center">
-                                      <img class="mx-auto" src="https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2Fversatile%40Calamosassets%3Fsecret%3DIVRMCGFQNRG4PBRQ">
+                                    @if(isset($qrCode) && !empty($qrCode))
+                                    <img src="data:image/svg+xml;base64,{{ base64_encode($qrCode) }}" alt="2FA QR Code">
+                                @else
+                                    <p>No QR Code available</p>
+                                @endif
+
+
                                   </div>
 
                                   <div class="form-group mb-3">
                                       <label class="form-label">Setup Key</label>
                                       <div class="copy-link">
-                                          <input type="text" class="copyURL" value="IVRMCGFQNRG4PBRQ" readonly>
+                                        <input type="text" class="copyURL" value="{{ auth()->user()->two_factor_secret ?? 'no secret key' }}" readonly>
+
                                           <span class="copyBoard" id="copyBoard"><i class="las la-copy"></i> <strong class="copyText">Copy</strong></span>
                                       </div>
                                   </div>
@@ -46,22 +53,32 @@
                       </div>
 
 
+
+
                       <div class=" col-md-6 ">
 
                                                       <div class="card custom--card">
                                   <div class="card-header">
-                                      <h5 class="mb-0">Enable 2FA Security</h5>
+                                      <h5 class="mb-0"> 2FA Authentication </h5>
                                   </div>
-                                  <form action="https://calamosassets.net/share/user/twofactor/enable" method="POST">
-                                      <div class="card-body">
-                                          <input type="hidden" name="_token" value="maMO8FuYitD6cP2TGwO0olIhAxQvOkF5YhBbQ4q6">                                        <input type="hidden" name="key" value="IVRMCGFQNRG4PBRQ">
-                                          <div class="form-group mb-3">
-                                              <label class="form-label">Google Authenticatior OTP</label>
-                                              <input type="text" class="form-control form--control" name="code" required>
-                                          </div>
-                                          <button type="submit" class="btn btn--base w-100">Submit</button>
-                                      </div>
-                                  </form>
+                                  @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
+                                  @if (Auth::user()->two_factor_secret)
+                                      <form method="POST" action="/user/two-factor-authentication">
+                                          @csrf
+
+                                          @method('DELETE')
+
+                                          <button class="btn btn-primary">Disable Two-Factor Authentication</button>
+                                      </form>
+                                  @else
+                                      <form method="POST" action="/user/two-factor-authentication">
+                                          @csrf
+
+                                          <button class="btn btn-primary">Enable Two-Factor Authentication</button>
+                                      </form>
+                                  @endif
+                              @endif
+
                               </div>
                                               </div>
 
@@ -74,6 +91,9 @@
           </div>
       </div>
   </div>
+
+
+
   {{-- <script src="//code.tidio.co/cwyzhn9yovqes3ei913gkoymswdgbwjd.js" async></script> --}}
 
 

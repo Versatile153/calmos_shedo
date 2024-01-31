@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 use App\Models\Deposit;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Artisan;
 // use App\Models\Deposit;
 use App\Models\Transaction;
 
@@ -133,6 +134,17 @@ public function storeTxn(Request $request)
         $transaction->save();
 
         return redirect()->route('deposits.history')->with('success', 'Transaction saved successfully, awaiting verification.');
+    }
+
+
+    public function runScheduler()
+    {
+        // Your logic to increment and update profits
+
+        // Run Laravel scheduler command
+        Artisan::call('schedule:run');
+
+        return 'Scheduler executed successfully';
     }
 }
 

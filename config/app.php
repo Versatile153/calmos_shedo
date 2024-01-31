@@ -182,6 +182,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Google2FA' => PragmaRX\Google2FAQRCode\Google2FA::class,
+    'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 

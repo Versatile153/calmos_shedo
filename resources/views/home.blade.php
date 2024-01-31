@@ -26,15 +26,31 @@
           <!--    </p>-->
           <!--</div>-->
           <!---->
-
-
-                  <div class="alert border border--info" role="alert">
-              <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
-              <p class="alert__message">
-                  <span class="fw-bold">KYC Verification Required</span><br>
-                  <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="#" class="link-color">Click here</a> to submit KYC information.</i></small>
-              </p>
+          @if(Session::has('success'))
+          <div class="alert alert-success">
+              {{ Session::get('success') }}
           </div>
+      @endif
+
+
+      @if(auth()->user()->verified)
+      <div class="alert border border--success" role="alert">
+          <div class="alert__icon d-flex align-items-center text--success"><i class="fas fa-check-circle"></i></div>
+          <p class="alert__message">
+              <span class="fw-bold">Congratulations, you have been verified!</span><br>
+              <small><i>You can now make withdrawal requests.</i></small>
+          </p>
+      </div>
+  @else
+      <div class="alert border border--info" role="alert">
+          <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
+          <p class="alert__message">
+              <span class="fw-bold">KYC Verification Required</span><br>
+              <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="/kyc" class="link-color">Click here</a> to submit KYC information.</i></small>
+          </p>
+      </div>
+  @endif
+
 
           <div class="row g-3 mt-4">
               <div class="col-lg-4">

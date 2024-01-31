@@ -41,8 +41,9 @@
                                 <td>{{ $ticket->subject }}</td>
                                 <td>{{ $ticket->message }}</td>
                                 <td>{{ $ticket->created_at->format('F j, Y') }}</td>
-                                <td>{{ $ticket->status }}</td>
                                 <td>{{ $ticket->priority }}</td>
+                                <td>{{ $ticket->status }}</td>
+
 
                                 <!-- Add more data columns as needed -->
                             </tr>

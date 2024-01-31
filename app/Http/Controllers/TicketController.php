@@ -3,7 +3,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class TicketController extends Controller
+
 {
     // ...
 
@@ -64,5 +66,11 @@ class TicketController extends Controller
 
         return view('referal_register', compact('referralLink'));
     }
+
+
+
+
+
+
 }
 

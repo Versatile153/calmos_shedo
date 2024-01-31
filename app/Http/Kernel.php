@@ -64,5 +64,9 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        \Laravel\Fortify\Http\Middleware\EnsureLoginIsNotThrottled::class,
+        \Laravel\Fortify\Http\Middleware\RedirectIfTwoFactorAuthenticatable::class,
+        \Laravel\Fortify\Http\Middleware\PreventAccessFromTwoFactorAuthenticationSecret::class,
+        'verify.kyc' => \App\Http\Middleware\VerifyKYC::class,
     ];
 }

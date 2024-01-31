@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+
+
 
 
 class DashboardConttroller extends Controller
@@ -164,12 +167,11 @@ class DashboardConttroller extends Controller
 
           return view('dashboard.ticket_new', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user'));
 
-          // Show the form to create a new ticket
-        //   return view('tickets.create', compact('user'));
-        // return view('dashboard.ticket_new', compact('user'));
     }
 
     public  function fa(){
+
+
 
         $totalDeposits = auth()->user()->deposits()->sum('amount');
         // Get the sum of amounts for approved deposits
@@ -178,7 +180,30 @@ class DashboardConttroller extends Controller
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
+
+
+        $user = auth()->user();
+
+        // Check if two-factor authentication is enabled for the user
+        if ($user->two_factor_secret) {
+            // Generate a QR code for 2FA
+            $qrCode = QrCode::size(300)->generate('otpauth://totp/YourApp:' . $user->email . '?secret=' . $user->two_factor_secret);
+
+            // dd($qrCode);
+            // Pass $qrCode to your view
+
+        return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','qrCode'));
+            // return view('dashboard', compact('qrCode'));
+        }
+
+        // If 2FA is not enabled, you can handle it accordingly
+
         return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+
+
+
+
+        // return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
         // return view('dashboard.fa');
     }
 
@@ -213,7 +238,18 @@ class DashboardConttroller extends Controller
         // return view('dashboard.password');
     }
     public  function invest(){
-        return view('dashboard.invest');
+
+        $user = Auth::user();
+        $totalDeposits = auth()->user()->deposits()->sum('amount');
+        // Get the sum of amounts for approved deposits
+        $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
+        $totalProfits = $user->invests()->sum('profits');
+
+        // Get the sum of amounts for pending deposits
+        $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+
+        return view('dashboard.invest', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user','totalProfits'));
+        // return view('dashboard.invest');
     }
 
 
@@ -249,4 +285,60 @@ class DashboardConttroller extends Controller
         // Redirect to the dashboard
         return redirect('/');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    public  function promotion(){
+        $totalDeposits = auth()->user()->deposits()->sum('amount');
+        // Get the sum of amounts for approved deposits
+        $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
+
+        // Get the sum of amounts for pending deposits
+        $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+
+        return view('dashboard.promotion', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        // return view('dashboard.transfer');
+    }
+
+
+    public  function kyc(){
+
+
+        $totalDeposits = auth()->user()->deposits()->sum('amount');
+        // Get the sum of amounts for approved deposits
+        $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
+
+        // Get the sum of amounts for pending deposits
+        $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+
+        return view('dashboard.kyc', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        // return view('dashboard.deposit');
+    }
+
+
+
+
+
+
+
+
+    public  function admin(){
+
+
+
+
+        return view('dashboard.admin');
+        // return view('dashboard.deposit');
+    }
+
+
 }
