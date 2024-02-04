@@ -6,6 +6,8 @@ use App\Models\Deposit;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Artisan;
 // use App\Models\Deposit;
+
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\Transaction;
 
 use Illuminate\Http\Request;
@@ -34,7 +36,7 @@ class DepositController extends Controller
         // Generate a unique code using Str::uuid()
         $code = strtoupper(Str::random(8));
 
-        // Create a new deposit linked to the logged-in user with the generated code and default status
+
         $user = auth()->user();
         $deposit = $user->deposits()->create([
             'gateway' => $request->gateway,
@@ -44,6 +46,8 @@ class DepositController extends Controller
             // Add other fields as needed
         ]);
 
+        $formData = $request->all();
+        session()->put('depositFormData', $formData);
         return redirect()
         ->route('deposits.confirmation', ['deposit' => $deposit])
         ->with('success', 'Deposit successful, waiting confirmation!'); // You can customize the message as needed
@@ -60,28 +64,33 @@ class DepositController extends Controller
 
     public function confirmation()
     {
+        $bitcoinAddress = '15C5EsMZpy7QXFZziP2FGkfkQ4xDow8k87';
+        $trcAddress = 'TQR8judMcbCt9SypNa4wW3ybZXRVDHTtcL';
+
+
+        $formData = session()->get('depositFormData', []);
+        $qrCodebtc = QrCode::size(300)->generate($bitcoinAddress);
+        $qrCodetrc = QrCode::size(300)->generate($trcAddress);
+
+
+
+
+
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
         $totalDeposits = auth()->user()->deposits()->sum('amount');
-        // Get the sum of amounts for approved deposits
+        $depositFormData = session()->get('depositFormData', []);
+
         $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
 
-        // Get the sum of amounts for pending deposits
+
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
-        return view('deposits.confirmation', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
-        // return view('deposits.confirmation');
+        return view('deposits.confirmation', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','qrCodetrc','depositFormData','qrCodebtc','bitcoinAddress','trcAddress','sumOfInterestInvest'));
+
     }
 
 
-    // Example in a controller method
 
-// public function history()
-// {
-//     $user = auth()->user();
-//     $deposits = $user->deposits;
-//     $confirmations = $user->depositConfirmations;
-
-//     return view('deposits.history', compact('deposits', 'confirmations'));
-// }
 
 
 
@@ -97,7 +106,8 @@ public function history()
     $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
     $deposits = $user->deposits;
 
-    return view('deposits.history', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','deposits'));
+    $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+    return view('deposits.history', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','deposits','sumOfInterestInvest'));
 
     // Retrieve the deposits for the user
 

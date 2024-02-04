@@ -98,12 +98,11 @@
               <div class="modal-header">
                   <h5 class="modal-title">Details</h5>
                   <span type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="las la-times"></i>
+                      <i class="las la-times"></i> deposit info: {{ $deposit->status }}
                   </span>
               </div>
               <div class="modal-body">
-                  <ul class="list-group userData mb-2">
-                  </ul>
+
                   <div class="feedback"></div>
               </div>
               <div class="modal-footer">

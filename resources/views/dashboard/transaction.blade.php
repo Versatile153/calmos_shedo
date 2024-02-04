@@ -64,15 +64,15 @@
                       <label>Remark</label>
                       <select name="remark" onChange="window.location.href=this.value">
                           <option value="/share/user/transactions?remark=">Any</option>
-                                                  <option value="/share/user/transactions?remark=balance_add" >Balance add</option>
-                                                  <option value="/share/user/transactions?remark=balance_subtract" >Balance subtract</option>
-                                                  <option value="/share/user/transactions?remark=capital_return" >Capital return</option>
-                                                  <option value="/share/user/transactions?remark=deposit" >Deposit</option>
-                                                  <option value="/share/user/transactions?remark=interest" >Interest</option>
-                                                  <option value="/share/user/transactions?remark=invest" >Invest</option>
-                                                  <option value="/share/user/transactions?remark=registration_bonus" >Registration bonus</option>
-                                                  <option value="/share/user/transactions?remark=withdraw" >Withdraw</option>
-                                                  <option value="/share/user/transactions?remark=withdraw_reject" >Withdraw reject</option>
+                                                  <option value="" >Balance add</option>
+                                                  <option value="" >Balance subtract</option>
+                                                  <option value="" >Capital return</option>
+                                                  <option value="" >Deposit</option>
+                                                  <option value="" >Interest</option>
+                                                  <option value="/invest" >Invest</option>
+                                                  <option value="" >Registration bonus</option>
+                                                  <option value="" >Withdraw</option>
+                                                  <option value="" >Withdraw reject</option>
                                               </select>
                   </div>
               </div>
@@ -94,6 +94,8 @@
                               </div>
                           </div>
                       </div>
+
+
                       <div class="col-lg-4 col-sm-4 col-12 order-sm-2 order-3 content-wrapper mt-sm-0 mt-3">
                           <p class="text-muted font-size--14px"><b>#YT4JYYBUC3CZ</b></p>
                       </div>
@@ -124,7 +126,7 @@
                           </ul>
                       </div>
                   </div>
-              </div><!-- transaction-item end -->
+              </div>
               </div>
 
 
@@ -137,7 +139,7 @@
 
               <div class="card">
                 <div class="card-body">
-                    @if($userWithdrawals->isEmpty())
+                    @if($userWithdrawals && $userWithdrawals->isEmpty())
                         <h4 class="text-muted"><i class="far fa-frown"></i> No withdrawals found</h4>
                     @else
                         <div class="table-responsive">
@@ -153,18 +155,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($userWithdrawals as $withdrawal)
+                                    @if(optional($userWithdrawals)->isNotEmpty())
+                                        @foreach($userWithdrawals as $withdrawal)
+                                            <tr>
+                                                <td>{{ $withdrawal->gateway }}</td>
+                                                <td>{{ $withdrawal->amount }}</td>
+                                                <td>{{ $withdrawal->status }}</td>
+                                                <td>{{ $withdrawal->wallet }}</td>
+                                                <td>{{ $withdrawal->created_at->format('F j, Y') }}</td>
+                                            </tr>
+                                        @endforeach
+                                    @else
                                         <tr>
-                                            <td>{{ $withdrawal->gateway }}</td>
-                                            <td>{{ $withdrawal->amount }}</td>
-
-                                            <td>{{ $withdrawal->status }}</td>
-                                            <td>{{ $withdrawal->wallet }}</td>
-
-                                            <td>{{ $withdrawal->created_at->format('F j, Y') }}</td>
+                                            <td colspan="5" class="text-center">No withdrawals found</td>
                                         </tr>
-                                    @endforeach
+                                    @endif
                                 </tbody>
+
                             </table>
                         </div>
                     @endif

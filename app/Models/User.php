@@ -82,7 +82,7 @@ public function referredUsers()
 }
 
 
-public function withdrawals()
+public function withdraws()
 {
     return $this->hasMany(Withdraw::class);
 }

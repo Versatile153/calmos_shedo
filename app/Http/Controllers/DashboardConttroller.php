@@ -16,7 +16,7 @@ class DashboardConttroller extends Controller
 
     public  function deposit(){
 
-
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
         $totalDeposits = auth()->user()->deposits()->sum('amount');
         // Get the sum of amounts for approved deposits
         $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
@@ -24,7 +24,7 @@ class DashboardConttroller extends Controller
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
-        return view('dashboard.deposit', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        return view('dashboard.deposit', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','sumOfInterestInvest'));
         // return view('dashboard.deposit');
     }
 
@@ -38,8 +38,9 @@ class DashboardConttroller extends Controller
 
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
 
-        return view('dashboard.withdraw', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user','totalProfits'));
+        return view('dashboard.withdraw', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user','totalProfits','sumOfInterestInvest'));
         // return view('dashboard.withdraw');
     }
 
@@ -64,25 +65,24 @@ class DashboardConttroller extends Controller
         ->where('status', 'approved')
         ->sum('amount');
 
-
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
 
         $activeInvestments = $user->invests()->where('status', 'approved')->get();
         $totalProfits = $user->invests()->sum('profits');
-        // Use $activeInvestments as needed (e.g., pass it to a view)
-        // return view('your_view_name', ['activeInvestments' => $activeInvestments]);
+
 
 
         $investments = $user->invests;
 
-        // Use $investments as needed (e.g., pass it to a view)
-        // return view('investments.index', ['investments' => $investments]);
     return view('dashboard.investment', [
         'pendingSum' => $pendingSum,
         'approvedSum' => $approvedSum,
         'sumOfApprovedDeposits' => $sumOfApprovedDeposits,
         'investments' => $investments,
         'activeInvestments' => $activeInvestments,
-        'totalProfits' => $totalProfits
+        'totalProfits' => $totalProfits,
+        'sumOfInterestInvest' => $sumOfInterestInvest,
+
 
     ]);
 }
@@ -92,47 +92,79 @@ class DashboardConttroller extends Controller
         $totalDeposits = auth()->user()->deposits()->sum('amount');
         // Get the sum of amounts for approved deposits
         $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
+        $sumOfApprovedInvestment = auth()->user()->invests()->where('status', 'approved')->sum('amount');
 
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
-        return view('dashboard.transfer', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+        return view('dashboard.transfer', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','sumOfApprovedInvestment','sumOfInterestInvest'));
         // return view('dashboard.transfer');
     }
 
     public  function transaction(){
         $user = Auth::user();
 
-        // Fetch withdrawals for the logged-in user
-        $userWithdrawals = $user->withdrawals;
+
+        $userWithdrawals = $user->withdraws;
         $totalProfits = $user->invests()->sum('profits');
 
-        // return view('withdraws.index', compact('userWithdrawals'));
 
         $totalDeposits = auth()->user()->deposits()->sum('amount');
-        // Get the sum of amounts for approved deposits
+
         $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
 
-        // Get the sum of amounts for pending deposits
+
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
-        return view('dashboard.transaction', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','userWithdrawals',));
-        // return view('dashboard.transaction');
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+        return view('dashboard.transaction', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','userWithdrawals','sumOfInterestInvest'));
+
     }
 
     public  function refferal(){
         $user = Auth::user();
-
-        // Get the users referred by the current user
+        $bonusSum = DB::table('users')->where('id', $user->id)->sum('bonus');
         $referredUsers = $user->referredUsers->load('deposits');
+
+        foreach ($referredUsers as $referredUser) {
+            foreach ($referredUser->deposits->where('status', 'approved') as $deposit) {
+                $bonusAmount = $deposit->amount * 0.05;
+
+                $referrers = User::where('referral_link', $referredUser->referred_by)->get();
+
+                // Update the bonus column for each referrer only if the bonus is 0
+                foreach ($referrers as $referrer) {
+                    if ($referrer->bonus == 0) {
+                        $referrer->bonus = $bonusAmount;
+                        $referrer->save(); // Save each referrer individually
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $totalDeposits = auth()->user()->deposits()->sum('amount');
-        // Get the sum of amounts for approved deposits
+
         $sumOfApprovedDeposits = auth()->user()->deposits()->where('status', 'approved')->sum('amount');
 
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
 
-        return view('dashboard.refferal', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','referredUsers'));
+        return view('dashboard.refferal', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','referredUsers','bonusSum','sumOfInterestInvest'));
         // return view('dashboard.refferal');
     }
 
@@ -148,7 +180,8 @@ class DashboardConttroller extends Controller
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
-        return view('dashboard.ticket', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','userTickets'));
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+        return view('dashboard.ticket', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','userTickets','sumOfInterestInvest'));
         // return view('dashboard.ticket');
     }
 
@@ -164,8 +197,9 @@ class DashboardConttroller extends Controller
 
           // Get the sum of amounts for pending deposits
           $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+          $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
 
-          return view('dashboard.ticket_new', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user'));
+          return view('dashboard.ticket_new', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user','sumOfInterestInvest'));
 
     }
 
@@ -179,7 +213,7 @@ class DashboardConttroller extends Controller
 
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
-
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
 
 
         $user = auth()->user();
@@ -192,19 +226,17 @@ class DashboardConttroller extends Controller
             // dd($qrCode);
             // Pass $qrCode to your view
 
-        return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','qrCode'));
+        return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','qrCode','sumOfInterestInvest'));
             // return view('dashboard', compact('qrCode'));
         }
 
         // If 2FA is not enabled, you can handle it accordingly
 
-        return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','sumOfInterestInvest'));
 
 
 
 
-        // return view('dashboard.fa', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
-        // return view('dashboard.fa');
     }
 
 
@@ -220,7 +252,8 @@ class DashboardConttroller extends Controller
     // Get the sum of amounts for pending deposits
     $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
-    return view('dashboard.profile', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user'));
+    $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+    return view('dashboard.profile', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user','sumOfInterestInvest'));
     // Pass user details to the view
     // return view('dashboard.profile', ['user' => $user]);
 }
@@ -233,8 +266,8 @@ class DashboardConttroller extends Controller
 
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
-
-        return view('dashboard.password', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+        return view('dashboard.password', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','sumOfInterestInvest'));
         // return view('dashboard.password');
     }
     public  function invest(){
@@ -247,8 +280,9 @@ class DashboardConttroller extends Controller
 
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
 
-        return view('dashboard.invest', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user','totalProfits'));
+        return view('dashboard.invest', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','user','totalProfits','sumOfInterestInvest'));
         // return view('dashboard.invest');
     }
 
@@ -305,7 +339,9 @@ class DashboardConttroller extends Controller
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
 
-        return view('dashboard.promotion', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+
+        return view('dashboard.promotion', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','sumOfInterestInvest'));
         // return view('dashboard.transfer');
     }
 
@@ -319,8 +355,8 @@ class DashboardConttroller extends Controller
 
         // Get the sum of amounts for pending deposits
         $sumOfPendingDeposits = auth()->user()->deposits()->where('status', 'pending')->sum('amount');
-
-        return view('dashboard.kyc', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits'));
+        $sumOfInterestInvest = auth()->user()->invests()->where('status', 'approved')->sum('profits');
+        return view('dashboard.kyc', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','sumOfInterestInvest'));
         // return view('dashboard.deposit');
     }
 

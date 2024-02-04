@@ -16,19 +16,19 @@
                       <p>You can transfer the balance to another user from both of your wallets. The transferred amount will be added to the deposit wallet of the targeted user.</p>
                   </div>
                   <div class="card custom--card">
-                      <form action="" method="post" enctype="multipart/form-data">
-                          <input type="hidden" name="_token" value="maMO8FuYitD6cP2TGwO0olIhAxQvOkF5YhBbQ4q6">                        <div class="card-body">
+                      <form action="{{ route('transfers.store') }}" method="post" enctype="multipart/form-data">
+                         @csrf                        <div class="card-body">
                               <div class="form-group">
                                   <label>Wallet</label>
                                   <select class="form-control form--control form-select" name="wallet">
                                       <option value="">Select a wallet</option>
-                                      <option value="deposit_wallet">Deposit Wallet - 50.00 USD</option>
-                                      <option value="interest_wallet">Interest Wallet - 0.00 USD</option>
+                                      <option value="deposit_wallet">Deposit Wallet -  {{  $sumOfApprovedDeposits}}  USD</option>
+                                      <option value="interest_wallet">Interest Wallet -{{   $sumOfApprovedInvestment }} USD</option>
                                   </select>
                               </div>
                               <div class="form-group">
                                   <label>Username</label>
-                                  <input type="text" name="username" class="form-control form--control findUser" required>
+                                  <input type="text" name="recipient_username" class="form-control form--control findUser" required>
                                   <code class="error-message"></code>
                               </div>
                               <div class="form-group">
@@ -51,6 +51,8 @@
               </div>
           </div>
       </div>
+
+
 
 
           </div>

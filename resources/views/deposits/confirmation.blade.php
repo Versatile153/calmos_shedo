@@ -33,17 +33,182 @@
               </div>
               <div class="card custom--card">
                   <div class="card-header card-header-bg">
+
+                      @if (!empty($depositFormData))
+
+
+                      @if ($depositFormData['gateway'] === 'Bitcoin')
                       <h5 class="text-center"> <i class="las la-wallet"></i> Bitcoin Payment</h5>
+                      @elseif ($depositFormData['gateway'] === 'USDT TRC20')
+
+                     <h5 class="text-center"> <i class="las la-wallet"></i>  USDT TRC20 Payment</h5>
+                      @endif
+                  @else
+                      <p>No data submitted.</p>
+                  @endif
+
+
+
+
                   </div>
                   <div class="card-body  ">
                       <form action="{{ route('confirmDeposit') }}" method="POST" enctype="multipart/form-data">
                          @csrf                    <div class="row">
                               <div class="col-md-12">
-                                  <p class="text-center mt-2">You have requested <b class="text--success">200.00 USD</b> , Please pay                                    <b class="text--success">0.01 BTC </b> for successful payment                                </p>
+                                  <p class="text-center mt-2">You have requested <b class="text--success">@if (!empty($depositFormData))
+
+                                    <ul>
+                                        @foreach ($depositFormData as $key => $value)
+                                            @if ($key === 'amount')
+                                                <li>{{ $key }}: {{ $value }}</li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                @else
+                                    <p>No data submitted.</p>
+                                @endif
+                                 USD</b> , Please pay                                    <b class="text--success">0.01 BTC </b> for successful payment                                </p>
+
+
+
+
+
+                                 @if (!empty($depositFormData))
+                                 <p>Submitted Data:</p>
+                                 <ul>
+                                     @foreach ($depositFormData as $key => $value)
+                                         @if ($key === 'gateway' || $key === 'amount')
+                                             <li>{{ $key }}: {{ $value }}</li>
+                                         @endif
+                                     @endforeach
+                                 </ul>
+                             @else
+                                 <p>No data submitted.</p>
+                             @endif
+
+
+
+
+
+
 
                                   <div class="my-4">
-                                      <p>Please make payment to the Bitcoin wallet address below. Click To Copy<div><b>bc1qxwdztttvhgpaqf3h8xzmyswt5k3zmq853xuzva</b><br></div><div>Or scan QR code</div><div><img src="https://i.imgur.com/VkyiGDe.png" width="369"><br></div><div><br></div></p>
+                                      <p>Please make payment to the
+
+
+
+
+                                        @if (!empty($depositFormData))
+
+
+                                        @if ($depositFormData['gateway'] === 'Bitcoin')
+                                           Bitcoin
+                                        @elseif ($depositFormData['gateway'] === 'USDT TRC20')
+                                       USDT TRC20
+                                        @endif
+                                    @else
+                                        <p>No data submitted.</p>
+                                    @endif
+
+
+
+                                        wallet address below. Or<div>
+
+
+
+
+
+
+                                        @if (!empty($depositFormData))
+
+
+                                        @if ($depositFormData['gateway'] === 'Bitcoin')
+                                        <button onclick="copyToClipboard('{{ $bitcoinAddress }}')">Copy Bitcoin Address</button>
+
+                                        <script>
+                                        function copyToClipboard(text) {
+                                            var textarea = document.createElement('textarea');
+                                            textarea.value = text;
+                                            document.body.appendChild(textarea);
+                                            textarea.select();
+                                            document.execCommand('copy');
+                                            document.body.removeChild(textarea);
+                                            alert('Bitcoin address copied to clipboard!');
+                                        }
+                                        </script>
+
+
+
+                                            {{ $bitcoinAddress}}"
+
+
+
+
+                                        @elseif ($depositFormData['gateway'] === 'USDT TRC20')
+
+
+
+
+
+
+                                        <button onclick="copyToClipboard('{{ $trcAddress}}')">Copy USDT TRC20 Address</button>
+
+                                        <script>
+                                        function copyToClipboard(text) {
+                                            var textarea = document.createElement('textarea');
+                                            textarea.value = text;
+                                            document.body.appendChild(textarea);
+                                            textarea.select();
+                                            document.execCommand('copy');
+                                            document.body.removeChild(textarea);
+                                            alert('USDT TRC20 address copied to clipboard!');
+                                        }
+                                        </script>
+
+                                                {{   $trcAddress}}
+
+
+                                        @endif
+                                    @else
+                                        <p>No data submitted.</p>
+                                    @endif
+
+
+
+
+
+
+                                        <br></div><div>Or scan QR code</div><div>
+
+
+
+
+
+
+
+
+
+
+
+                                        @if (!empty($depositFormData))
+
+
+                                        @if ($depositFormData['gateway'] === 'Bitcoin')
+                                            <img src="data:image/svg+xml;base64,{{ base64_encode($qrCodebtc) }}" alt="Bitcoin QR Code">
+                                        @elseif ($depositFormData['gateway'] === 'USDT TRC20')
+                                            <img src="data:image/svg+xml;base64,{{ base64_encode($qrCodetrc) }}" alt="USDT TRC20 QR Code">
+                                        @endif
+                                    @else
+                                        <p>No data submitted.</p>
+                                    @endif
+
+
+
+                                      <br></div><div><br></div></p>
                                   </div>
+
+
+
 
                               </div>
 

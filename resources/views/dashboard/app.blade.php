@@ -123,7 +123,7 @@
           <div class="profile-info">
               <p class="fs--13px mb-3 fw-bold">ACCOUNT BALANCE</p>
               <h4 class="usd-balance text--base mb-2 fs--30">{{  $sumOfApprovedDeposits}}<sub class="top-0 fs--13px">USD <small>(Deposit Wallet)</small> </sub></h4>
-              <p class="btc-balance fw-medium fs--18px">0.00 <sub class="top-0 fs--13px">USD <small>(Interest Wallet)</small></sub></p>
+              <p class="btc-balance fw-medium fs--18px">{{ $sumOfInterestInvest }}  <sub class="top-0 fs--13px">USD <small>(Interest Wallet)</small></sub></p>
               <div class="mt-4 d-flex flex-wrap gap-2">
                   <a href="/deposit" class="btn btn--base btn--smd">Deposit</a>
                   <a href="/withdraw" class="btn btn--secondary btn--smd">Withdraw</a>
@@ -179,17 +179,17 @@
                               </select>
                   <ul class="nav-header-link d-flex flex-wrap gap-2">
               <li>
-                  <a class="link" href="javascript:void(0)">{{ explode(' ', auth()->user()->name)[0] }}</a>
+                  <a class="link" href="javascript:void(0)">{{ strtoupper(substr(auth()->user()->name, 0, 2)) }}
+                </a>
                   <div class="dropdown-wrapper">
                       <div class="dropdown-header">
-                          <h6 class="name text--base">{{ explode(' ', auth()->user()->name)[0] }}
-                        </h6>
+
                           <p class="fs--14px">{{ explode(' ', auth()->user()->name)[0] }}
                         </p>
                       </div>
                       <ul class="links">
-                          <li><a href="#"><i class="las la-user"></i> Profile</a></li>
-                          <li><a href="#"><i class="las la-key"></i> Change Password</a></li>
+                          <li><a href="/profile"><i class="las la-user"></i> Profile</a></li>
+                          <li><a href="/password"><i class="las la-key"></i> Change Password</a></li>
                           <li>
 
 

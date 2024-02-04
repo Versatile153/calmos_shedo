@@ -58,7 +58,7 @@
                       <div class="d-flex justify-content-between">
                           <h5 class="text-secondary">Successful Deposits</h5>
                       </div>
-                      <h3 class="text--secondary my-4">USD</h3>
+                      <h3 class="text--secondary my-4">USD {{ $sumOfApprovedDeposits}}</h3>
                       <div class="widget-lists">
                           <div class="row">
                               <div class="col-4">
@@ -70,12 +70,12 @@
                                   <span>${{     $sumOfPendingDeposits}}</span>
                               </div>
                               <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
+                                  <p class="fw-bold">Approved</p>
+                                  <span>{{  $sumOfApprovedDeposits}}</span>
                               </div>
                           </div>
                           <hr>
-                          <p><small><i>You've requested to deposit $300.00. Where $300.00 is just initiated but not submitted.</i></small></p>
+                          <p><small><i>You've made a total  deposit of ${{    $totalDeposits}}.00. Where ${{  $sumOfPendingDeposits}}.00 is just initiated but not approved yet.</i></small></p>
                       </div>
                   </div>
               </div>
@@ -106,24 +106,24 @@
                       <div class="d-flex justify-content-between">
                           <h5 class="text-secondary">Successful Withdrawals</h5>
                       </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
+                      <h3 class="text--secondary my-4">{{    $sumOfApprovedWithdraws}} USD</h3>
                       <div class="widget-lists">
                           <div class="row">
                               <div class="col-4">
                                   <p class="fw-bold">Submitted</p>
-                                  <span>$0.00</span>
+                                  <span>${{    $sumOfTotalWithdraws}}</span>
                               </div>
                               <div class="col-4">
                                   <p class="fw-bold">Pending</p>
-                                  <span>$0.00</span>
+                                  <span>${{    $sumOfPendingWithdraws}}</span>
                               </div>
                               <div class="col-4">
-                                  <p class="fw-bold">Rejected</p>
-                                  <span>$0.00</span>
+                                  <p class="fw-bold">Approved</p>
+                                  <span>${{    $sumOfApprovedWithdraws}}</span>
                               </div>
                           </div>
                           <hr>
-                          <p><small><i>You've requested to withdraw $0.00. Where $0.00 is just initiated but not submitted.</i></small></p>
+                          <p><small><i>You've requested to withdraw ${{    $sumOfTotalWithdraws}}.00. Where ${{  $sumOfPendingWithdraws}}.00 is just initiated but not approved yet.</i></small></p>
                       </div>
                   </div>
               </div>
@@ -132,24 +132,24 @@
                       <div class="d-flex justify-content-between">
                           <h5 class="text-secondary">Total Investments</h5>
                       </div>
-                      <h3 class="text--secondary my-4">0.00 USD</h3>
+                      <h3 class="text--secondary my-4"> {{ $sumOfTotalInvests}} USD</h3>
                       <div class="widget-lists">
                           <div class="row">
                               <div class="col-4">
-                                  <p class="fw-bold">Completed</p>
-                                  <span>$0.00</span>
+                                  <p class="fw-bold">Approved</p>
+                                  <span> ${{$sumOfApprovedInvest}}</span>
                               </div>
                               <div class="col-4">
-                                  <p class="fw-bold">Running</p>
-                                  <span>$0.00</span>
+                                  <p class="fw-bold">Pending</p>
+                                  <span>${{  $sumOfPendingInvest}}</span>
                               </div>
                               <div class="col-4">
                                   <p class="fw-bold">Interests</p>
-                                  <span>$0.00</span>
+                                  <span>${{ $sumOfInterestInvest }}</span>
                               </div>
                           </div>
                           <hr>
-                          <p><small><i>You've invested $0.00 from the deposit wallet and $0.00 from the interest wallet</i></small></p>
+                          <p><small><i>You've invested ${{$sumOfApprovedInvest}} from the deposit wallet and ${{ $sumOfInterestInvest }} of interest earned</i></small></p>
                       </div>
                   </div>
               </div>

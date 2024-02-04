@@ -35,7 +35,7 @@
                                   <div class="form-group">
                                       <label class="form-label">Amount</label>
                                       <div class="input-group">
-                                          <input type="number" step="any" name="amount" class="form-control form--control" max="{{ $totalProfits }}" value="" autocomplete="off" required>
+                                          <input type="number" step="any" name="amount" class="form-control form--control" max="" value="" autocomplete="off" required>
                                           <span class="input-group-text">USD</span>
                                       </div>
                                   </div>

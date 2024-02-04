@@ -32,18 +32,20 @@ class WithdrawController extends Controller
         // Get the currently authenticated user
         $user = Auth::user();
 
-        // Create a new Withdraw record and associate it with the user
-        $withdraw = new Withdraw([
-            'gateway' => $request->input('gateway'),
-            'amount' => $request->input('amount'),
-            'wallet' => $request->input('wallet'), // Adjust based on your form field name
+        // Create and save the withdrawal using the user's relationship
+        $withdraw = $user->withdraws()->create([
+            'gateway' => $request->gateway,
+            'amount' => $request->amount,
+            'wallet' => $request->wallet,
+
+            'status' => 'pending',
         ]);
 
-        // Save the withdrawal record
-        $withdraw->user()->associate($user); // Assuming there is a 'user' relationship in the Withdraw model
-        $withdraw->save();
 
-        // Check if the withdrawal is approved
+
+
+
+
 
 
         return redirect()->route('dashboard.transaction')

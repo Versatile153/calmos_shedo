@@ -16,17 +16,19 @@ class UpdateProfits extends Command
     try {
         \DB::beginTransaction();
 
-        Invest::query()->update([
-            'profits' => \DB::raw('profits * 1.10'),
+        Invest::where('amount', 20000)->update([
+            'profits' => \DB::raw('profits + (amount * 0.05)'),
         ]);
 
         \DB::commit();
-        $this->info('Profits updated successfully.');
+        $this->info('Profits updated successfully based on 5% of the amount for rows with amount 20000.');
     } catch (\Exception $e) {
         \DB::rollBack();
         \Log::error('Error updating profits: ' . $e->getMessage());
         $this->error('Error updating profits. Check the logs for details.');
     }
+
+
 }
 
 }

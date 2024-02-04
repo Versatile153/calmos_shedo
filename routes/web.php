@@ -12,6 +12,8 @@ use App\Http\Controllers\WithdrawController;
 use Laravel\Fortify\Http\Controllers\TwoFactorAuthenticationController;
 use App\Http\Controllers\KycController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TransferController;
+
 
 
 
@@ -61,7 +63,7 @@ Route::middleware(['verify.kyc'])->group(function () {
     // ... other routes that require KYC verification
 });
 Route::get('/investment', [App\Http\Controllers\DashboardConttroller::class, 'investment'])->name('investment');
-Route::get('/transfer', [App\Http\Controllers\DashboardConttroller::class, 'transfer']);
+Route::get('/transfer', [App\Http\Controllers\DashboardConttroller::class, 'transfer'])->name('dashboard.transfer');
 Route::get('/transaction', [App\Http\Controllers\DashboardConttroller::class, 'transaction'])->name('dashboard.transaction');
 Route::get('/refferal', [App\Http\Controllers\DashboardConttroller::class, 'refferal']);
 Route::get('/ticket', [App\Http\Controllers\DashboardConttroller::class, 'ticket'])->name('deposits.tickets');
@@ -190,4 +192,14 @@ Route::middleware(['auth'])->group(function () {
 
 
 
+// Example: routes/web.php
 
+
+// Example: routes/web.php
+
+Route::middleware(['auth'])->group(function () {
+    // Route::get('/transfers/create', [TransferController::class, 'create'])->name('transfers.create');
+    Route::post('/transfers/store', [TransferController::class, 'store'])->name('transfers.store');
+});
+
+Route::post('/transfer', [TransferController::class, 'transfer'])->name('transfer.process');

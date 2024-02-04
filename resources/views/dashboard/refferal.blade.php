@@ -10,7 +10,7 @@
 
   <div class="dashboard-inner">
       <div class="mb-4">
-          <h3>My Referrals</h3>
+          <h3>My Referrals (bonus:${{ $bonusSum }})</h3>
       </div>
       <div class="row gy-4">
           <div class="col-md-12">
@@ -36,7 +36,9 @@
             <tr>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Deposit Amount</th>
+
+                <th>Deposit Status</th>
+
 
                 <!-- Add more columns as needed -->
             </tr>
@@ -46,7 +48,19 @@
                 <tr>
                     <td>{{ $referredUser->name }}</td>
                     <td>{{ $referredUser->email }}</td>
-                    <td>{{ $referredUser->deposits->sum('amount') }}</td>
+                    <td>
+                        @if ($referredUser->deposits->isNotEmpty())
+                            @if ($referredUser->deposits->where('status', 'approved')->isNotEmpty())
+                                Deposit approved
+                            @else
+                                Deposit not approved
+                            @endif
+                        @else
+                            No deposit created
+                        @endif
+                    </td>
+
+
                     <!-- Add more columns as needed -->
                 </tr>
             @endforeach
