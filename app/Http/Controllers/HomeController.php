@@ -45,9 +45,6 @@ class HomeController extends Controller
 
 
 
-
-
-
         return view('home', compact('totalDeposits', 'sumOfApprovedDeposits', 'sumOfPendingDeposits','sumOfTotalWithdraws','sumOfPendingWithdraws','sumOfApprovedWithdraws','sumOfTotalInvests','sumOfApprovedInvest','sumOfPendingInvest','sumOfInterestInvest'));
     }
 }

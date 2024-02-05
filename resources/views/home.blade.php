@@ -2,6 +2,8 @@
 
 @extends('dashboard.app')
 @section('content')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
   <script>
   function loadGoogleTranslate() {
@@ -16,16 +18,6 @@
 
 
 
-
-          <!---->
-          <!--<div class="alert border border--warning" role="alert">-->
-          <!--    <div class="alert__icon d-flex align-items-center text--warning"><i class="fas fa-user-lock"></i></div>-->
-          <!--    <p class="alert__message">-->
-          <!--        <span class="fw-bold">2FA Authentication</span><br>-->
-          <!--        <small><i>To keep safe your account, Please enable <a href="https://calamosassets.net/share/user/twofactor" class="link-color">2FA</a> security.</i> It will make secure your account and balance.</small>-->
-          <!--    </p>-->
-          <!--</div>-->
-          <!---->
           @if(Session::has('success'))
           <div class="alert alert-success">
               {{ Session::get('success') }}
@@ -35,7 +27,14 @@
 
       @if(auth()->user()->verified)
       <div class="alert border border--success" role="alert">
-          <div class="alert__icon d-flex align-items-center text--success"><i class="fas fa-check-circle"></i></div>
+          <div class="alert__icon d-flex align-items-center text--success">
+
+            {{-- <div class="alert__icon d-flex align-items-center text--info">
+                <i class="fas fa-link"></i>
+            </div> --}}
+
+
+        </div>
           <p class="alert__message">
               <span class="fw-bold">Congratulations, you have been verified!</span><br>
               <small><i>You can now make withdrawal requests.</i></small>
@@ -43,7 +42,13 @@
       </div>
   @else
       <div class="alert border border--info" role="alert">
-          <div class="alert__icon d-flex align-items-center text--info"><i class="fas fa-file-signature"></i></div>
+        <div class="alert__icon d-flex align-items-center text--info">
+            {{-- <i class="material-icons text--info">description</i> --}}
+
+
+        </div>
+
+
           <p class="alert__message">
               <span class="fw-bold">KYC Verification Required</span><br>
               <small><i>Please submit the required KYC information to verify yourself. Otherwise, you couldn't make any withdrawal requests to the system. <a href="/kyc" class="link-color">Click here</a> to submit KYC information.</i></small>
@@ -331,6 +336,9 @@
               $('.cookies-card').removeClass('hide')
           }, 2000);
       </script>
+
+
+
   </body>
 
   </html>

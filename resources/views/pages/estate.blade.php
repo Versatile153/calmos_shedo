@@ -93,7 +93,7 @@ var ecs_ajax_params = {"ajaxurl":"https:\/\/calamosassets.net\/wp-admin\/admin-a
 				<div class="elementor-element elementor-element-ba691d6 elementor-widget__width-inherit elementor-widget elementor-widget-button" data-id="ba691d6" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a href="https://calamosassets.net/share/user/register" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+			<a href="/register" class="elementor-button-link elementor-button elementor-size-sm" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Get Started</span>
 		</span>

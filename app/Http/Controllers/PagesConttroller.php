@@ -59,6 +59,10 @@ class PagesConttroller extends Controller
 
 
 
+    public  function summary(){
+        return view('pages.summary');
+    }
+
 
 
     public  function terms(){

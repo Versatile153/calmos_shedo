@@ -23,7 +23,7 @@
         @endif
               <div class="dashboard-inner">
       <div class="mb-4">
-          <p>Investment</p>
+          {{-- <p>Investment</p> --}}
           <h3>All Investment</h3>
       </div>
       <div class="row gy-4">
@@ -83,7 +83,17 @@
 
 
 
+      @if(session('success'))
+      <div class="alert alert-success">
+          {{ session('success') }}
+      </div>
+  @endif
 
+  @if(session('error'))
+      <div class="alert alert-danger">
+          {{ session('error') }}
+      </div>
+  @endif
 
 
 

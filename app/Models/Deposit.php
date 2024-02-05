@@ -10,7 +10,7 @@ class Deposit extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['gateway', 'amount', 'code', 'status'];
+    protected $fillable = ['gateway', 'amount', 'code', 'status','sum'];
 
     public function user()
     {
@@ -20,5 +20,11 @@ class Deposit extends Model
     public function confirmation()
     {
         return $this->hasOne(DepositConfirmation::class);
+    }
+
+
+    public function getSumAttribute()
+    {
+        return $this->where('user_id', $this->user_id)->where('status', 'approved')->sum('amount');
     }
 }

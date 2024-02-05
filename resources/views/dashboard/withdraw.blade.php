@@ -14,6 +14,17 @@
               </div>
               <form action="{{ route('withdraws.store') }}" method="post">
                 @csrf
+                @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 
                   <input type="hidden" name="currency">
                   <div class="card">
@@ -35,7 +46,7 @@
                                   <div class="form-group">
                                       <label class="form-label">Amount</label>
                                       <div class="input-group">
-                                          <input type="number" step="any" name="amount" class="form-control form--control" max="" value="" autocomplete="off" required>
+                                          <input type="number" min="50" max="{{ $sumOfInterestInvest }} " step="any" name="amount" class="form-control form--control" max="" value="" autocomplete="off" required>
                                           <span class="input-group-text">USD</span>
                                       </div>
                                   </div>

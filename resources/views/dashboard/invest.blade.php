@@ -6,7 +6,11 @@
   }
   </script>
           <div class="dashboard-container">
-
+            @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
                   <div class="bg--light">
           <div class="dashboard-inner ">
               <div class="mb-4">
@@ -208,8 +212,13 @@
                       <i class="las la-times"></i>
                   </button>
               </div>
+
+
+
               <form action="/investments" method="post">
                @csrf
+
+
                                       <div class="modal-body">
                           <div class="form-group">
                               <h6 class="text-center investAmountRange"></h6>
@@ -220,17 +229,17 @@
                               <select class="form-control form--control form-select" name="gateway" required>
                                   <option value="">Select One</option>
                                                                   <option value="deposit_wallet">Deposit Wallet - $  {{ $sumOfApprovedDeposits}}</option>
-                                                                                                                                      <option value="bitcoin"  data-gateway="{&quot;id&quot;:2,&quot;name&quot;:&quot;Bitcoin&quot;,&quot;currency&quot;:&quot;BTC&quot;,&quot;symbol&quot;:&quot;&quot;,&quot;method_code&quot;:1001,&quot;gateway_alias&quot;:&quot;bitcoin&quot;,&quot;min_amount&quot;:&quot;10.00000000&quot;,&quot;max_amount&quot;:&quot;1000000.00000000&quot;,&quot;percent_charge&quot;:&quot;0.00&quot;,&quot;fixed_charge&quot;:&quot;0.00000000&quot;,&quot;rate&quot;:&quot;0.00004700&quot;,&quot;image&quot;:null,&quot;gateway_parameter&quot;:null,&quot;created_at&quot;:&quot;2023-03-10T19:01:33.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-12T18:42:56.000000Z&quot;,&quot;method&quot;:{&quot;id&quot;:50,&quot;form_id&quot;:19,&quot;code&quot;:&quot;1001&quot;,&quot;name&quot;:&quot;Bitcoin&quot;,&quot;alias&quot;:&quot;bitcoin&quot;,&quot;status&quot;:true,&quot;gateway_parameters&quot;:&quot;[]&quot;,&quot;supported_currencies&quot;:[],&quot;crypto&quot;:0,&quot;extra&quot;:null,&quot;description&quot;:&quot;Please make payment to the Bitcoin wallet address below. Click To Copy&lt;div&gt;&lt;b&gt;bc1qxwdztttvhgpaqf3h8xzmyswt5k3zmq853xuzva&lt;\/b&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Or scan QR code&lt;\/div&gt;&lt;div&gt;&lt;img src=\&quot;https:\/\/i.imgur.com\/VkyiGDe.png\&quot; width=\&quot;369\&quot;&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&quot;,&quot;created_at&quot;:&quot;2023-03-10T19:01:33.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-26T05:51:26.000000Z&quot;}}">Bitcoin</option>
-                                                                      <option value="etherium"  data-gateway="{&quot;id&quot;:1,&quot;name&quot;:&quot;Ethereum&quot;,&quot;currency&quot;:&quot;Eth&quot;,&quot;symbol&quot;:&quot;&quot;,&quot;method_code&quot;:1000,&quot;gateway_alias&quot;:&quot;ethereum&quot;,&quot;min_amount&quot;:&quot;10.00000000&quot;,&quot;max_amount&quot;:&quot;1000000.00000000&quot;,&quot;percent_charge&quot;:&quot;0.00&quot;,&quot;fixed_charge&quot;:&quot;0.00000000&quot;,&quot;rate&quot;:&quot;0.00064000&quot;,&quot;image&quot;:null,&quot;gateway_parameter&quot;:null,&quot;created_at&quot;:&quot;2023-03-10T18:59:32.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-12T19:38:47.000000Z&quot;,&quot;method&quot;:{&quot;id&quot;:49,&quot;form_id&quot;:18,&quot;code&quot;:&quot;1000&quot;,&quot;name&quot;:&quot;Ethereum&quot;,&quot;alias&quot;:&quot;ethereum&quot;,&quot;status&quot;:true,&quot;gateway_parameters&quot;:&quot;[]&quot;,&quot;supported_currencies&quot;:[],&quot;crypto&quot;:0,&quot;extra&quot;:null,&quot;description&quot;:&quot;Please make payment to the wallet address below. Click to copy&lt;div&gt;&lt;b&gt;0x8430a3C7452D9C59DBb3Cfe8F7AFd193FDeE87FD&lt;\/b&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Or scan QR code&lt;\/div&gt;&lt;div&gt;&lt;img src=\&quot;https:\/\/i.imgur.com\/4o6ravd.png\&quot; width=\&quot;377\&quot;&gt;&lt;br&gt;&lt;\/div&gt;&quot;,&quot;created_at&quot;:&quot;2023-03-10T18:59:32.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-26T05:51:30.000000Z&quot;}}">Ethereum</option>
-                                                                      <option value="USDT ERC20"  data-gateway="{&quot;id&quot;:3,&quot;name&quot;:&quot;USDT ERC20&quot;,&quot;currency&quot;:&quot;USDT&quot;,&quot;symbol&quot;:&quot;&quot;,&quot;method_code&quot;:1002,&quot;gateway_alias&quot;:&quot;usdt_erc20&quot;,&quot;min_amount&quot;:&quot;10.00000000&quot;,&quot;max_amount&quot;:&quot;1000000.00000000&quot;,&quot;percent_charge&quot;:&quot;0.00&quot;,&quot;fixed_charge&quot;:&quot;0.00000000&quot;,&quot;rate&quot;:&quot;1.00000000&quot;,&quot;image&quot;:null,&quot;gateway_parameter&quot;:null,&quot;created_at&quot;:&quot;2023-03-10T19:03:05.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-12T19:38:11.000000Z&quot;,&quot;method&quot;:{&quot;id&quot;:51,&quot;form_id&quot;:20,&quot;code&quot;:&quot;1002&quot;,&quot;name&quot;:&quot;USDT ERC20&quot;,&quot;alias&quot;:&quot;usdt_erc20&quot;,&quot;status&quot;:true,&quot;gateway_parameters&quot;:&quot;[]&quot;,&quot;supported_currencies&quot;:[],&quot;crypto&quot;:0,&quot;extra&quot;:null,&quot;description&quot;:&quot;Please make payment to the USDT (ERC20) wallet address Below. Click To Copy&lt;div&gt;&lt;b&gt;0x8430a3C7452D9C59DBb3Cfe8F7AFd193FDeE87FD&lt;\/b&gt;&lt;\/div&gt;&lt;div&gt;Or scan QR code&lt;\/div&gt;&lt;div&gt;&lt;img src=\&quot;https:\/\/i.imgur.com\/ecLRQuw.jpg\&quot; width=\&quot;378\&quot;&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;\/div&gt;&lt;\/div&gt;&quot;,&quot;created_at&quot;:&quot;2023-03-10T19:03:05.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-26T05:51:17.000000Z&quot;}}">USDT ERC20</option>
-                                                                      <option value="USDT TRC20"  data-gateway="{&quot;id&quot;:4,&quot;name&quot;:&quot;USDT TRC20&quot;,&quot;currency&quot;:&quot;USDT&quot;,&quot;symbol&quot;:&quot;&quot;,&quot;method_code&quot;:1003,&quot;gateway_alias&quot;:&quot;usdt_trc20&quot;,&quot;min_amount&quot;:&quot;10.00000000&quot;,&quot;max_amount&quot;:&quot;1000000.00000000&quot;,&quot;percent_charge&quot;:&quot;0.00&quot;,&quot;fixed_charge&quot;:&quot;0.00000000&quot;,&quot;rate&quot;:&quot;1.00000000&quot;,&quot;image&quot;:null,&quot;gateway_parameter&quot;:null,&quot;created_at&quot;:&quot;2023-03-12T19:37:35.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-12T19:37:54.000000Z&quot;,&quot;method&quot;:{&quot;id&quot;:52,&quot;form_id&quot;:24,&quot;code&quot;:&quot;1003&quot;,&quot;name&quot;:&quot;USDT TRC20&quot;,&quot;alias&quot;:&quot;usdt_trc20&quot;,&quot;status&quot;:true,&quot;gateway_parameters&quot;:&quot;[]&quot;,&quot;supported_currencies&quot;:[],&quot;crypto&quot;:0,&quot;extra&quot;:null,&quot;description&quot;:&quot;Please make payment to the USDT (TRC20) wallet address below. Click To Copy&lt;div&gt;&lt;b&gt;TCSRqE6t5C8BoCXVcVdWVFF4bYjHLY1akp&lt;\/b&gt;&lt;br&gt;&lt;\/div&gt;&lt;div&gt;Or scan QR code&lt;\/div&gt;&lt;div&gt;&lt;img src=\&quot;https:\/\/i.imgur.com\/c8z73aR.png\&quot; width=\&quot;368\&quot;&gt;&lt;br&gt;&lt;\/div&gt;&quot;,&quot;created_at&quot;:&quot;2023-03-12T19:37:35.000000Z&quot;,&quot;updated_at&quot;:&quot;2023-03-26T05:51:10.000000Z&quot;}}">USDT TRC20</option>
+                                                                  <option value="interest_wallet">Interest Wallet - $ {{ $sumOfInterestInvest}}</option>
+
                                                               </select>
                               <code class="gateway-info rate-info d-none">Rate: 1 USD = <span class="gateway-rate"></span> <span class="method_currency"></span></code>
                           </div>
                           <div class="form-group">
                               <label>Invest Amount</label>
                               <div class="input-group">
-                                  <input type="number" step="any" class="form-control form--control" name="amount" required>
+
+
+                                  <input type="number" step="any" min="50" max="" class="form-control form--control" name="amount" required>
                                   <div class="input-group-text">USD</div>
                               </div>
                               <code class="gateway-info d-none">Charge: <span class="charge"></span> USD. Total amount: <span class="total"></span> USD</code>

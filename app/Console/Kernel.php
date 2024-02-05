@@ -4,6 +4,8 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Console\Commands\UpdateApprovedDepositsSum;
+
 
 class Kernel extends ConsoleKernel
 {
@@ -51,6 +53,9 @@ class Kernel extends ConsoleKernel
                 \Log::error('Error updating profits: ' . $e->getMessage());
             }
         })->everyMinute();
+
+        $schedule->command('update:invests-sum')->everyMinute();
+        $schedule->command(UpdateApprovedDepositsSum::class)->everyMinute();
     }
 
     /**

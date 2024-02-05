@@ -42,10 +42,18 @@ class DepositController extends Controller
             'gateway' => $request->gateway,
             'amount' => $request->amount,
             'code' => $code,
-            'status' => 'pending', // Set the default status to 'pending'
-            // Add other fields as needed
+            'status' => 'pending',
         ]);
 
+
+        // $userId = $user->id;
+        // $userSum = Deposit::where('user_id', $userId)->where('status', 'approved')->sum('amount');
+
+        // // Find or create the user record and update the 'sum' column
+        // Deposit::updateOrCreate(
+        //     ['user_id' => $userId],
+        //     ['sum' => $userSum]
+        // );
         $formData = $request->all();
         session()->put('depositFormData', $formData);
         return redirect()

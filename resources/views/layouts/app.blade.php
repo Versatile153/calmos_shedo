@@ -2861,7 +2861,12 @@ var ecs_ajax_params = {"ajaxurl":"https:\/\/calamosassets.net\/wp-admin\/admin-a
 				<div role="button" class="hfe-nav-menu__toggle elementor-clickable">
 					<span class="screen-reader-text">Menu</span>
 					<div class="hfe-nav-menu-icon">
-						<i aria-hidden="true"  class="fas fa-align-justify"></i>					</div>
+
+
+						<i aria-hidden="true"  class="fas fa-align-justify"></i>
+
+
+                    </div>
 				</div>
 				<nav class="hfe-nav-menu__layout-horizontal hfe-nav-menu__submenu-arrow" data-toggle-icon="&lt;i aria-hidden=&quot;true&quot; tabindex=&quot;0&quot; class=&quot;fas fa-align-justify&quot;&gt;&lt;/i&gt;" data-close-icon="&lt;i aria-hidden=&quot;true&quot; tabindex=&quot;0&quot; class=&quot;far fa-window-close&quot;&gt;&lt;/i&gt;" data-full-width="yes"><ul id="menu-1-1195996" class="hfe-nav-menu"><li id="menu-item-340" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home parent hfe-creative-menu"><a href="/" class = "hfe-menu-item">Home</a></li>
 <li id="menu-item-341" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/about" class = "hfe-menu-item">About Us</a></li>
@@ -2995,7 +3000,7 @@ var ecs_ajax_params = {"ajaxurl":"https:\/\/calamosassets.net\/wp-admin\/admin-a
 					<div class="hfe-nav-menu-icon">
 											</div>
 				</div>
-				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-c563b3c" class="hfe-nav-menu"><li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="https://calamosassets.net/medic-canabis" class = "hfe-menu-item">Medical Cannabis</a></li>
+				<nav class="hfe-nav-menu__layout-vertical hfe-nav-menu__submenu-arrow" data-toggle-icon="" data-close-icon="" data-full-width=""><ul id="menu-1-c563b3c" class="hfe-nav-menu"><li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/medic-canabis" class = "hfe-menu-item">Medical Cannabis</a></li>
 <li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/crypto/" class = "hfe-menu-item">Cryptocurrency</a></li>
 <li id="menu-item-335" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/agriculture" class = "hfe-menu-item">Agriculture</a></li>
 <li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"><a href="/estate" class = "hfe-menu-item">Real Estate</a></li>

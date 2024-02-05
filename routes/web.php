@@ -53,6 +53,8 @@ Route::get('/estate', [App\Http\Controllers\PagesConttroller::class, 'estate']);
 Route::get('/advise', [App\Http\Controllers\PagesConttroller::class, 'advise']);
 Route::get('/privacy', [App\Http\Controllers\PagesConttroller::class, 'privacy']);
 Route::get('/terms', [App\Http\Controllers\PagesConttroller::class, 'terms']);
+Route::get('/summary', [App\Http\Controllers\PagesConttroller::class, 'summary']);
+
 
 
 //dashboard routes
@@ -203,3 +205,4 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::post('/transfer', [TransferController::class, 'transfer'])->name('transfer.process');
+Route::get('/update-sum', [App\Http\Controllers\DashboardConttroller::class, 'updateSum'])->name('update.sum');;

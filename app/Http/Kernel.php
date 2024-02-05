@@ -68,5 +68,6 @@ class Kernel extends HttpKernel
         \Laravel\Fortify\Http\Middleware\RedirectIfTwoFactorAuthenticatable::class,
         \Laravel\Fortify\Http\Middleware\PreventAccessFromTwoFactorAuthenticationSecret::class,
         'verify.kyc' => \App\Http\Middleware\VerifyKYC::class,
+        \App\Console\Commands\UpdateInvestsSum::class,
     ];
 }

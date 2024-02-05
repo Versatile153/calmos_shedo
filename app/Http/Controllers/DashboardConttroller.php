@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\Models\Invest;
+// use Illuminate\Http\Request;
 
 
 
@@ -377,4 +379,5 @@ class DashboardConttroller extends Controller
     }
 
 
+ 
 }
